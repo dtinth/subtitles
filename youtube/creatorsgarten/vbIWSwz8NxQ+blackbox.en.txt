@@ -1,0 +1,1088 @@
+
+[@1.22]
+Let’s start!
+
+[@2.60]
+Hello, my name is Thai. I am a
+software engineer at Eventpop (Opn).
+
+[@10.00]
+Today I would like to share an approach
+I’m using with various projects.
+
+[@15.88]
+Both personal and work projects,
+
+[@18.02]
+To let me develop software fast
+while maintaining quality.
+
+[@23.00]
+I will “move fast” because
+I have a lot of slides.
+
+[@28.26]
+-
+
+[@29.00]
+Today’s contents is opinion-based,
+formed from my personal experience.
+
+[@33.32]
+It’s not backed by empirical facts.
+
+[@36.27]
+There could be many cases
+I didn’t think of.
+
+[@38.45]
+So don’t take this as gospel.
+
+[@40.54]
+My opinion changes as I learn more.
+
+[@44.69]
+Today I look at it one way, next month
+I might look at it another way.
+
+[@47.73]
+But still, I hope you find something
+useful out of this talk.
+
+[@53.15]
+-
+
+[@54.00]
+I want to talk about this topic because
+Sometimes I work on a project
+
+[@60.58]
+and found that I don’t feel confident
+changing or improving the codebase.
+
+[@64.00]
+I feel unproductive,
+
+[@68.22]
+and I don’t like that feeling.
+
+[@70.00]
+Once there was a system that
+suddenly worked slowly.
+
+[@76.00]
+Mobile users find the app janky,
+so I went to optimize it.
+
+[@81.30]
+It’s a React app.
+I have to optimize its performance.
+
+[@84.11]
+I have to refactor and
+restructure many parts.
+
+[@87.18]
+I finished the optimization, but I don't
+dare to merge or release it to production
+
+[@91.17]
+because I'm afraid I may break something.
+
+[@93.00]
+I have to waste time testing all
+the features to gain confidence.
+
+[@97.00]
+The bigger the project,
+the longer it takes to test.
+
+[@102.00]
+What can help us is: automated testing.
+
+[@104.65]
+We all know that we should write tests.
+
+[@107.00]
+I talked to other devs and asked
+if they would write a test.
+
+[@111.00]
+Some people working in the startup said
+they didn't have time to write unit tests
+
+[@114.87]
+because they had to finish
+the project in time.
+
+[@117.00]
+But when we develop without unit tests,
+our code may get tangled up.
+
+[@122.00]
+When we try to write a unit test later,
+we may find it to be impossible
+
+[@126.00]
+unless we refactor the code
+so that it’s testable.
+
+[@129.00]
+But we may not be able to refactor
+confidently because there is no test.
+
+[@132.00]
+Moreover, the higher level tests such as
+API tests and UI tests may not be written.
+
+[@138.00]
+How do we release to production?
+
+[@141.00]
+If we don't YOLO and hope for the best,
+we might have to test them all manually.
+
+[@145.00]
+Or throw it to another team,
+such as QA team.
+
+[@149.00]
+If you're lucky, the QA team will write
+an automated test for you.
+
+[@154.00]
+But sometimes the automated test can only
+be run in the environment of QA.
+
+[@158.00]
+When we try to run it in localhost,
+it may not work.
+
+[@162.00]
+So the feedback loop may be slow
+if there is no automated test to help.
+
+[@170.00]
+I've read that high-performing teams
+should have short feedback loops.
+
+[@177.00]
+A team should be able to ship things
+to production within 15 minutes.
+
+[@184.00]
+Hence the saying, 15 minutes or bust.
+
+[@188.00]
+I'm slowly finding my way
+to get closer to that point.
+
+[@193.00]
+If we are in a team with
+a mindset about TDD.
+
+[@196.00]
+“We need tests no matter what,
+for our sustainable future.”
+
+[@202.00]
+It may be easy to get to that point.
+
+[@205.00]
+But just doing TDD, I think
+it requires a lot of investment.
+
+[@209.00]
+Beginning with education. When I was in
+university, I only learned the theory
+
+[@215.00]
+and just the basic examples
+of software testing.
+
+[@219.34]
+When I had to test real code,
+
+[@220.95]
+I found that one component renders
+hundreds of subcomponents.
+
+[@224.00]
+We have to prepare the environment
+
+[@225.72]
+so that all of our components
+can run in our testing tool.
+
+[@228.00]
+Or we have to fix it so that each
+component can mock the subcomponents.
+
+[@234.00]
+It's tiring no matter which way you go.
+
+[@237.00]
+If it's this hard, how much harder to
+convince the team to write tests with you?
+
+[@242.00]
+And it's not that we can learn to write
+good tests in just an hour or two.
+
+[@246.00]
+I think TDD has a pretty big iceburg.
+
+[@249.88]
+When I started writing,
+my speed dropped a lot.
+
+[@253.00]
+I had to think about how to test.
+
+[@256.00]
+Sometimes I wrote a bad test, it slowed
+me down instead of getting faster.
+
+[@260.00]
+Not only it couldn't catch any bug.
+
+[@262.95]
+It also fails whenever
+I restructure my code.
+
+[@267.00]
+I also had to restructure the tests.
+
+[@270.00]
+It took me years until I feel that
+TDD actually makes me faster.
+
+[@274.00]
+Some teams just don't have enough
+resources to invest in these things.
+
+[@279.00]
+Sometimes I don't have time to write unit
+tests, especially in a very urgent work.
+
+[@283.00]
+So I had to choose what to do.
+
+[@285.69]
+If I don't invest in CI/CD testing,
+then I have to live in fear.
+
+[@289.58]
+Everything requires review,
+testing, approval, and sign-off.
+
+[@293.66]
+But even if I can get past that point,
+I will find the next stage,
+
+[@296.39]
+Which is the framework. Sometimes if I
+write code according to the standard,
+
+[@301.00]
+I get a code that can't be unit-tested.
+
+[@303.00]
+So I have to do integration test instead
+and prepare a testing environment.
+
+[@307.00]
+Or I have to refactor the code
+to make it easier to unit test.
+
+[@310.53]
+For example, I may have to use
+the hexagonal architecture.
+
+[@313.00]
+But when I use it, our code which
+was once simple and straightforward —
+
+[@316.00]
+There are only two classes:
+controller and model.
+
+[@319.00]
+It's now divided into 5 classes.
+
+[@321.00]
+Break out of the framework’s pattern.
+
+[@323.00]
+Other people read it and don't understand.
+
+[@325.00]
+They had to jump 5 files.
+
+[@327.00]
+But everything can be unit tested.
+
+[@329.00]
+But I don't know if it's worth it.
+
+[@331.00]
+There are many trade-offs and there
+are many conflicting opinions.
+
+[@336.00]
+Some recommend testing pyramids.
+
+[@338.00]
+Some say that pyramids are out and
+recommend testing trophies instead.
+
+[@341.00]
+Some say that end-to-end tests
+may not a good idea, so be careful.
+
+[@346.00]
+Some say that unit tests are not
+very helpful, so they don't write.
+
+[@350.00]
+But at least they seem to all agree
+taht testing is a lot of headache.
+
+[@356.00]
+For this session,
+
+[@358.06]
+I will talk about my development and
+testing philosophy I am using now.
+
+[@363.55]
+There two key points.
+
+[@365.00]
+First, I make my software easy to test.
+
+[@368.00]
+I try to wear a tester's hat.
+
+[@370.00]
+And if I feel that something is
+difficult to test, I fix that.
+
+[@375.00]
+And so, writing tests will be easier.
+
+[@378.00]
+When I reach the point where writing tests
+is easier than testing by hand,
+
+[@381.58]
+I believe people will start
+writing tests themselves.
+
+[@384.00]
+Second, if I encounter a bug,
+I will cover it with a test first.
+
+[@389.00]
+It turns out, what worked for me
+was not unit testing.
+
+[@395.00]
+I found that it was black box testing.
+
+[@397.00]
+Normally, our software is composed
+of subcomponents, right?
+
+[@401.00]
+Controllers, components, utilities, etc.
+
+[@404.00]
+In white box testing, we take these
+components and test them separately.
+
+[@410.00]
+But in black box testing,
+we don't care about what's inside.
+
+[@413.00]
+We test from the outside.
+
+[@415.00]
+Isn't this difficult?
+
+[@417.00]
+Let's go back to the first step,
+which is making it easy to test.
+
+[@420.00]
+Let's look at the pyramid test first.
+
+[@422.00]
+Actually, there are many
+versions of the pyramid.
+
+[@425.00]
+Let's look at this picture first.
+
+[@427.00]
+Most of the black box tests
+will cover the top of the pyramid.
+
+[@430.00]
+Such as end-to-end and integration tests.
+
+[@432.00]
+The top of the pyramid is often
+looked at in a negative way.
+
+[@436.00]
+Because it is slow, easy to break (flaky)
+
+[@440.00]
+And when it breaks,
+we don't know where it breaks.
+
+[@442.00]
+We have to dive into the code and debug.
+
+[@445.00]
+So it become a recommendation to do that
+less and do a more unit tests.
+
+[@449.00]
+But many times, developers only write unit
+tests and there are no tests for the UI.
+
+[@454.00]
+Or in some cases, there are unit tests
+and all the tests are passed.
+
+[@457.00]
+But when the program is broken in
+production, there are no logs.
+
+[@460.00]
+Because they believe in
+unit tests too much.
+
+[@462.00]
+Currently, when I go into codebase
+and find that there are no tests,
+
+[@467.00]
+What I'm trying to do now is not
+to start writing unit tests anymore.
+
+[@471.00]
+I will try to test from the UI first.
+
+[@474.00]
+Some people see me doing this and
+wonder why I went this way.
+
+[@478.00]
+It’s true that unit tests are fast,
+reliable and detailed.
+
+[@482.00]
+But it's not what I wanted at that time.
+
+[@484.00]
+What I want is confidence.
+
+[@486.00]
+I want to be sure that there is nothing
+broken after changing the code.
+
+[@490.00]
+Let's look at some code examples.
+
+[@492.00]
+Let's start with unit tests.
+This is from NestJS.
+
+[@495.00]
+When we write unit tests for NestJS,
+
+[@497.00]
+Firstly we have to know thier testing
+APIs, such as createTestingModule.
+
+[@502.00]
+We have to learn more about it.
+
+[@504.00]
+And we have to know which services
+our controllers use.
+
+[@507.00]
+So we can mock the right method.
+
+[@509.00]
+I won't talk about the
+pros and cons of this now.
+
+[@511.00]
+Let's compare with the black box API test.
+
+[@514.00]
+I called the API, checked the status
+and checked the response.
+
+[@519.00]
+And that's it. It looks easier, right?
+
+[@523.00]
+But you might notice...
+
+[@525.00]
+What if our database is empty,
+Wouldn't the test fail?
+
+[@529.00]
+Or if the DB already contains other
+data, wouldn’t the tests also fail?
+
+[@534.00]
+Yes, and we have to fix it.
+
+[@536.00]
+The way I fixed it is:
+I created another API endpoint.
+
+[@539.00]
+To prepare data in the database.
+
+[@541.00]
+When we call this API, the database
+will have the data ready to test.
+
+[@545.00]
+Now, you may also notice...
+
+[@548.00]
+When I call this API, wouldn't
+all existing data get deleted?
+
+[@551.00]
+Or if the API doesn't clear the data,
+wouldn’t the data get all mixed up?
+
+[@555.00]
+If we run many tests at the same time,
+wouldn’t they interfere each other?
+
+[@558.00]
+Yes, and we have to fix that too.
+
+[@560.00]
+I fixed it by making my system handle
+many environments in the same instance.
+
+[@566.00]
+Each environment’s data are isolated.
+
+[@570.00]
+That is, I make the system multi-tenant.
+
+[@572.00]
+When we call the API, the API
+will create a new environment.
+
+[@576.00]
+And we use the created
+environment ID in our test.
+
+[@580.00]
+Now, every test will have
+its own environment.
+
+[@584.00]
+This will prevent the test data from
+being mixed up with other data.
+
+[@588.00]
+In addition, it will allow us to run
+many tests at the same time.
+
+[@592.00]
+If we make our app easy to test,
+it will be easier to write tests.
+
+[@597.00]
+I often hear that UI tests and
+end-to-end tests are difficult to write.
+
+[@602.00]
+Which is true.
+
+[@604.00]
+If we don't make our app easy to test,
+it will be difficult to test.
+
+[@607.00]
+Especially if the app writer and the
+test writer are different people.
+
+[@610.00]
+Or they are in a different team or company
+
+[@612.00]
+and they don’t work together closely,
+yeah, it’s gonna be quite hard.
+
+[@615.00]
+But if we use the tester’s hat
+while we are developing,
+
+[@618.00]
+or work closely with testers or QAs,
+
+[@622.00]
+it will be easier for both sides.
+
+[@624.00]
+I see that in some companies, QA and devs
+are regularly pair-programming.
+
+[@629.00]
+In other fields, like game arcades,
+
+[@632.00]
+if we use the key to open the coin slot,
+there will be a service button behind it.
+
+[@636.00]
+When we press it,
+we will see the test menu.
+
+[@638.00]
+It will make testing easier. No need to
+bring a cabinet back to the factory.
+
+[@644.00]
+Many phones have a secret number.
+When we enter it, we’ll see a test menu.
+
+[@649.00]
+We can do the same with our app.
+
+[@652.00]
+We can put developer tools
+or testing tools in our app.
+
+[@656.00]
+Mobile apps can do the same.
+
+[@658.00]
+We can put test pages and endpoints.
+
+[@662.00]
+Don't forget to protect those endpoints.
+
+[@664.00]
+For example, in the app I developed,
+I put a test menu in the app.
+
+[@668.00]
+I can test the components
+without having to open the storybook.
+
+[@674.00]
+Here I built a web-based game,
+
+[@677.00]
+I added another page.
+
+[@680.00]
+When I press it, it will show
+the result immediately.
+
+[@683.00]
+I can develop that page without
+having to play the game every time.
+
+[@688.00]
+This page is connected to the backend.
+
+[@690.00]
+But it will be a test environment.
+
+[@692.00]
+I also have a route that runs unit tests.
+
+[@698.00]
+I can run unit tests without
+having to run any extra commands.
+
+[@702.00]
+I still write unit tests.
+
+[@705.00]
+But I usually test things
+that are more or less standalone.
+
+[@709.24]
+They can be tested without having
+to mock or stub excessively.
+
+[@712.00]
+I no longer try to unit test everything.
+
+[@715.00]
+Another thing I want to recommend is to
+keep testing tools close to our hands.
+
+[@720.00]
+So we can use them easily.
+
+[@722.00]
+My favorite tool now is Playwright.
+
+[@725.00]
+I will show you an example.
+
+[@728.00]
+I installed the Playwright extension.
+
+[@730.00]
+I write code normally on the right.
+
+[@732.00]
+On the left, there’s a list of tests.
+
+[@735.00]
+When I press run test, it will open the
+browser and run all tests.
+
+[@738.00]
+The tests run quickly.
+It's pretty fast.
+
+[@743.00]
+But if I uncheck “show browser”
+and press run test again,
+
+[@748.00]
+Playwright will run many tests
+at the same time.
+
+[@751.00]
+It's true that the UI tests
+are slower than unit tests.
+
+[@756.00]
+But we can scale it.
+
+[@758.00]
+If our system is designed
+to allow simultaneous testing.
+
+[@762.00]
+That's it. I don't have to
+open many terminals anymore.
+
+[@765.00]
+Let's look at a real project.
+
+[@768.00]
+Someone sent me a bug report
+that a page fails to load.
+
+[@772.48]
+I tried it, and it fails for me too.
+
+[@775.00]
+Recall number 2. If there is a bug,
+cover it with tests before fixing.
+
+[@779.00]
+I tried debugging and found that
+my service worker had a bug.
+
+[@784.00]
+I have no idea how to
+unit-test a service worker.
+
+[@788.00]
+How to import it in unit tests
+and verify its behavior?
+
+[@791.00]
+But if I write Playwright test,
+I can write it immediately.
+
+[@795.00]
+1. Go to the first page.
+
+[@797.00]
+2. Wait until the service worker
+is activated.
+
+[@800.00]
+3. Go to the problem page.
+
+[@802.00]
+4. Check that the page must be loaded.
+
+[@805.00]
+I ran the test.
+
+[@807.00]
+Before fixing it, it should fail.
+
+[@809.00]
+Here it fails.
+
+[@813.00]
+After I fixed it, I pressed run again.
+
+[@816.00]
+The test has passed.
+
+[@818.00]
+When we find a bug, if we can cover it
+with tests almost every time.
+
+[@823.00]
+I think we are in a very good place.
+
+[@826.00]
+Without having to worry much
+about code coverage.
+
+[@829.00]
+Especially when we consider
+missing features as bugs.
+
+[@832.00]
+Every time we implement a new feature,
+we will have at least one more test.
+
+[@836.00]
+It gave me confidence
+
+[@841.00]
+to improve the software and
+refactor mercilessly.
+
+[@845.00]
+Here’s is an example.
+
+[@847.00]
+In this PR, I moved the project
+from Nuxt.js to Next.js.
+
+[@851.82]
+-
+
+[@853.20]
+The UI is almost unchanged.
+
+[@855.00]
+The difference is they were written
+in Vue and now they are in React.
+
+[@858.24]
+-
+
+[@859.00]
+I can do this because I have UI tests.
+
+[@863.00]
+For component tests, either it has
+to be thrown away or be rewritten.
+
+[@867.00]
+Because now it’s a different framework.
+
+[@869.00]
+Another thing that I think
+makes the system easy to test.
+
+[@872.00]
+Is to design our service
+to be multi-tenant.
+
+[@875.00]
+In addition to making it easy to test.
+
+[@878.00]
+It also helps when we have to
+test across multiple services.
+
+[@881.00]
+If it's not multi-tenant, when we test,
+we have to deploy the whole cluster.
+
+[@886.00]
+All services must be on the same
+environment to be tested together.
+
+[@889.00]
+But when our service is multi-tenant,
+
+[@893.78]
+We can treat the staging environment
+of each service as a private property.
+
+[@898.00]
+Others are not allowed to interfere.
+
+[@899.80]
+If someone want to test my service,
+
+[@901.52]
+They can test against its staging tenant
+on the production cluster.
+
+[@907.00]
+And if there is no multi-tenant, it is
+difficult to run tests at the same time.
+
+[@914.00]
+I often see in many projects.
+
+[@916.00]
+Before running each test case,
+it has to clear the database first.
+
+[@919.00]
+Because of that we can't run
+multiple tests at the same time.
+
+[@922.00]
+But if our system is multi-tenant, we can
+give each test case its own environment.
+
+[@928.00]
+And run them in parallel.
+
+[@932.00]
+Then we can clear the test data
+from the database at the end.
+
+[@936.00]
+This leads us to Testing in Production.
+
+[@942.00]
+What's scarier than
+“it works on my machine”
+
+[@946.00]
+is “it works on staging”
+but breaks on production.
+
+[@949.00]
+Michael Bryzek described in his
+Testing in Production talk that
+
+[@954.00]
+the company had already stopped using
+staging because he found it very wasteful.
+
+[@959.00]
+So he went to test on production instead.
+
+[@961.00]
+He gave an example. Throughout the day
+a bot would buy products from real stores.
+
+[@966.00]
+3 lines of code was added.
+
+[@969.00]
+If the buyer’s email address
+ends with a certain suffix,
+
+[@973.00]
+It's considered a test user.
+
+[@975.00]
+And cancel the order.
+
+[@977.00]
+This is an example of testing in
+production in a good way.
+
+[@981.00]
+For those who want to write black box
+tests, I want to leave you with this.
+
+[@986.00]
+Don't use waitForTimeout, sleep or delay.
+
+[@989.00]
+There are very few exceptions.
+
+[@991.00]
+No matter how long we wait, that number
+will always either be too small too big.
+
+[@996.00]
+If wait for too long, it’s wasteful.
+
+[@998.00]
+If wait for too short, the test fails.
+
+[@1000.00]
+Instead, check repeatedly (poll) to see
+if our test is ready to continue.
+
+[@1005.00]
+If there is no way to check, we can
+go back to our app and improve that.
+
+[@1010.00]
+Okay, I'm out of time.
+
+[@1013.00]
+I want to say that the current black box
+testing tools is much better.
+
+[@1018.00]
+And debugging UI tests is not
+as difficult as before.
+
+[@1022.00]
+If we run a black box test
+and find it difficult to debug,
+
+[@1026.15]
+I think it's the problem of our app.
+
+[@1028.00]
+Our app should be easy to debug and fix.
+
+[@1031.00]
+So I leave it to you.
+
+[@1033.00]
+1. Make software easy to test.
+
+[@1036.00]
+Especially if our work
+involves multiple services,
+
+[@1039.29]
+Try to make each service testable on its
+own without connecting to other services.
+
+[@1044.00]
+So I use the term “black box testing”,
+not “end-to-end testing”.
+
+[@1048.00]
+2. If there is a bug, let it be
+covered with a test before fixing.
+
+[@1055.00]
+I hope that you find some content
+in this talk interesting.
+
+[@1064.00]
+For now, thank you!
+
+[@1066.45]
+-

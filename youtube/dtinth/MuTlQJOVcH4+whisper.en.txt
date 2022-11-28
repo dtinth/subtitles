@@ -1,0 +1,166 @@
+[@0.00]
+For those who make YouTube videos and want
+the video to have English subtitles,
+
+[@5.00]
+OpenAI released a model called Whisper.
+
+[@9.00]
+It is a model that can listen to sounds in
+various languages and create English subtitles.
+
+[@13.00]
+OpenAI open-sourced this model,
+so anyone can use them for free.
+
+[@19.00]
+But to run it, at first we had to set up
+various software on the machine.
+
+[@24.00]
+And that machine must have a GPU
+with a fairly high video RAM.
+
+[@28.00]
+In October, @ArthurFDLR made this model
+very easy to use through Google Colab.
+
+[@35.00]
+Now it can be done in the browser.
+
+[@37.00]
+I will show you in this video.
+
+[@39.00]
+Start by pressing the Notebook button
+in the youtube-whisper page.
+
+[@43.00]
+The link is in the description.
+
+[@45.00]
+When you press it, you will find
+the Google Colab program.
+
+[@48.00]
+This page is divided into
+several parts called "cells".
+
+[@52.00]
+In each cell, there is a "Run" button
+we can press to run the code in that cell.
+
+[@57.00]
+Let's try to run the code
+in the first cell.
+
+[@61.00]
+When the cell is finished, you will see
+a checkmark on the left
+
+[@65.65]
+and the results at the bottom.
+
+[@68.03]
+Let's go to the next cell.
+
+[@70.09]
+This cell will set up the required tools
+on the Colab envorionment.
+
+[@74.58]
+Press the Run button and wait.
+
+[@76.87]
+-
+
+[@77.39]
+This may take a while.
+
+[@79.26]
+When it's done, we can continue.
+
+[@82.19]
+I will skip cell 3.
+
+[@83.00]
+Cell 4 lets you choose the model size.
+
+[@88.00]
+The Colab can run the large size model,
+which is the most accurate size.
+
+[@94.00]
+So we choose Large
+and press the Run button.
+
+[@97.00]
+After that, we have to wait for it
+to load the model.
+
+[@100.00]
+When it's done, we can continue.
+
+[@103.00]
+The next step is to choose the video.
+
+[@105.00]
+You can paste the YouTube link.
+
+[@107.00]
+After that, uncheck the checkbox
+next to "store_audio" and press Run.
+
+[@114.00]
+When it's done, we will go
+to the last cell.
+
+[@117.00]
+Select the language spoken in the video.
+
+[@120.00]
+In "task", we can choose between
+"transcribe" (speech-to-text),
+
+[@126.78]
+and "translate" (into English).
+
+[@129.00]
+In this example, I want an English
+subtitle, so I choose "translate".
+
+[@134.00]
+Once ready, press the Run button.
+
+[@137.00]
+When we scroll down, we will see
+the subtitle slowly showing up.
+
+[@142.00]
+Wait for it to work until it's done.
+
+[@145.00]
+When it's done, it will create
+3 files in our folder.
+
+[@148.00]
+We can click on the folder icon on the
+left and download the ".vtt" file.
+
+[@156.00]
+We can now upload the VTT file
+to YouTube for further editing.
+
+[@162.00]
+The subtitle that the Whispers generates
+has many imperfections.
+
+[@168.00]
+We have to fix them ourselves.
+
+[@170.00]
+But thanks to the AI-generated subtitles,
+my subtitling process is now much faster.
+
+[@175.88]
+-
