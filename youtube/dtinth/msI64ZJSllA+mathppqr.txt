@@ -724,149 +724,133 @@ Just filling white in is enough.
 [@614.00]
 Now we might see our square as
 
-[@616.00]
-Four squares instead of four corners.
-
-[@620.00]
-That we get in our drawing.
+[@616.39]
+A collection of 4 coordinates, which
+represents the 4 corners of our square.
 
 [@622.00]
-We can use these arrays to stack them into arrays.
+We can use put them into an array,
 
 [@625.00]
-And write a function to loop.
+And write a function to loop over it
+to draw this picture.
 
-[@627.00]
-To draw this picture.
-
-[@629.00]
-The problem is that the square that you see
-
-[@633.00]
-The original is not here.
+[@631.04]
+However, the square you see here
+was not originally is here —
 
 [@635.00]
-The original is here.
+It was there.
 
 [@637.00]
-And how do we make it look like it's popping out here?
+How do we make it look like
+it’s popping out here?
 
-[@641.00]
-Which makes me face the first problem.
+[@642.29]
+And so comes the first problem:
 
-[@644.00]
-The effect that we're going to do is a three-dimensional effect.
+[@644.91]
+Our animation is 3D, but our canvas is 2D.
 
-[@647.00]
-But our canvas has only two dimensions.
-
-[@650.00]
+[@651.56]
 How to fix it?
 
 [@653.00]
-The solution is to render the three-dimensional image
-
-[@656.00]
-Using two-dimensional canvas.
+The solution, of course, is to render
+the 3D image on a 2D canvas!
 
 [@658.00]
-Some of you may have studied art or drawing.
+Some of you may have studied it
+in the art or drawing classes.
 
 [@661.00]
-It's a perspective drawing.
+“perspective drawing.”
 
 [@664.00]
-So we can implement it.
+So we are going to implement it.
 
 [@666.00]
 But before we get there,
 
 [@668.00]
-I have to be careful that
-
-[@670.00]
-I might not be able to do it.
-
-[@672.00]
-I'll try to do an easy animation.
+In case I couldn’t do it, at least
+I want to do a simpler animation.
 
 [@674.00]
-I'll try it.
+So let’s try that first!
 
-[@676.00]
-This one is not right. This one is right.
+[@676.14]
+-
 
-[@680.00]
-We'll use the width-prime.
+[@678.45]
+No, that’s not the animation.
+
+[@679.84]
+That’s a bug.
+
+[@680.82]
+-
+
+[@683.65]
+It should be “width, height”.
 
 [@685.00]
-And then we'll get the animation that's gone.
+And now I got a disintegrating effect.
 
-[@688.00]
-We'll click the finger and it's gone.
+[@689.74]
+-
 
-[@690.00]
-And then we'll come back to the upgrade.
+[@690.58]
+Then I can upgrade this to the next level.
 
 [@693.00]
 Back to our topic.
 
 [@695.00]
-I've studied how to draw a three-dimensional picture.
+I've studied how to draw 3D pictures.
 
-[@699.00]
-I found that
-
-[@701.00]
-the convention is different from drawing two-dimensional pictures.
+[@700.33]
+I found that its convention is
+different from drawing 2D pictures.
 
 [@704.00]
-A two-dimensional picture,
+In 2D, (0, 0) is on the top left,
+with the y-axis pointing down.
 
-[@706.00]
-The zero point is on the left.
-
-[@708.00]
-The y-axis is pointing down.
-
-[@710.00]
-When it's a three-dimensional picture,
-
-[@712.00]
-It's a zero point in the middle of the y-axis.
+[@709.43]
+But in 3D, the origin is in the middle,
+with the y-axis pointing up.
 
 [@714.00]
-Some people say that the z-axis is pointing up.
+Some people will argue that
+it’s the z-axis that should point up.
 
 [@719.00]
-But it's okay.
-
-[@721.00]
-For today, it's a y-axis.
+But whatever, for today,
+the y-axis points up.
 
 [@723.00]
 The y-axis points up.
 
 [@725.00]
-
+-
 
 [@726.00]
-It's gonna make me change the numbers.
-
-[@730.00]
-Calculate the numbers.
+So I’ll have to account for that
+when calculating the coordinates.
 
 [@732.00]
-But it makes the calculation easier.
+But overall, it makes
+the calculation easier.
 
 [@735.00]
-We're going to go into the three-dimensional world.
+We're going into the 3rd dimension.
 
-[@737.00]
+[@737.66]
 So, besides the width and height,
 
-[@739.00]
-We'll have depth.
+[@739.76]
+We’ll have depth as well.
 
 [@741.00]
 Let me explain this picture first.
@@ -875,142 +859,113 @@ Let me explain this picture first.
 The sharp point you see there.
 
 [@746.00]
-It's like our eyes.
+It's like our eye.
 
 [@748.00]
-Looking at the drawing map.
-
-[@750.00]
-We call it the drawing surface.
+Looking at the drawing surface
 
 [@752.00]
-From the original two-dimensional.
+From 2 axes, x and y,
 
-[@754.00]
-We'll have a z-axis.
+[@754.13]
+now we have the z-axis.
 
 [@756.00]
-All the points in the drawing surface.
-
-[@759.00]
-The z-axis will be zero.
+All the points on the drawing surface.
+will have its z value = 0.
 
 [@762.00]
-The origin point, we'll have a zero point.
+The origin point gets another zero,
+so now it’s (0, 0, 0), because it’s 3D.
 
-[@765.00]
-One of them is a zero point.
-
-[@767.00]
-Because it's three-dimensional.
-
-[@769.00]
+[@766.61]
 It's in the middle of the picture.
 
 [@771.00]
-And besides that, we can set the distance of the eye.
+And besides that, we can set
+the distance of the eye.
 
 [@774.00]
-I've decided that our eyes.
+In this example, the eye is
+500 units away from the drawing.
 
-[@777.00]
-Look away from the picture.
-
-[@779.00]
-500 units.
-
-[@781.00]
-So, the eye's radius is 0.0500.
-
-[@784.00]
-Something like that.
+[@781.52]
+So, the eye’s position is (0, 0, 500).
 
 [@786.00]
-Okay, I'll go back to the beginning.
-
-[@790.00]
-Back to the original.
+Okay, I’ll revert this animation
+and go back to the beginning.
 
 [@792.00]
-This part is a square.
-
-[@796.00]
-And it's a square from the start.
+This piece starts off a square.
 
 [@798.00]
-It's in the middle of the picture.
+It was in the middle of the picture.
 
 [@801.00]
-What I have to do is move it out here.
+I have to move it to the correct place.
 
 [@804.00]
-And make it pop out.
+I’ll explain later on
+how to pop it out like that.
 
-[@806.00]
-I'll explain again.
-
-[@808.00]
-How to make it pop out.
+[@808.93]
+But let’s assume it’s
+already there for now.
 
 [@811.00]
-I have to find a way to draw.
-
-[@813.00]
-How to draw it.
+I’ll have to find a way to draw it…
 
 [@816.00]
-Make it look like it's popping out.
+In a way that makes it
+look like it’s popping out…
 
 [@819.00]
 Like this.
 
 [@820.00]
-So, let's look at another angle.
+So, let's look at it from another angle.
 
 [@823.00]
 Change to the side view.
 
 [@825.00]
-We'll see only the y-axis and z-axis.
+We’ll see only the y-axis and z-axis.
 
 [@827.00]
 The x-axis will disappear.
 
 [@829.00]
-I want you to focus on the bottom of the square.
-
-[@834.00]
-Like this.
+I want you to focus on
+the bottom corner of the square.
 
 [@836.00]
-Suppose there's a y-axis and z-axis here.
+Suppose its coordinate is as shown here,
 
 [@840.00]
-What we can do is draw a line from our eyes.
+What we can do is:
 
-[@844.00]
-Through that point.
+[@841.73]
+Draw a line from our eyes,
+through that point,
 
-[@846.00]
-And see the top of the square.
+[@845.56]
+And find out where it lands
+on the drawing surface.
 
-[@848.00]
+[@851.24]
 We have to solve this problem.
 
-[@852.00]
-If the radius of the eye is 0.0500.
-
-[@858.00]
-Through that point.
+[@853.94]
+Drawing a line from the eye
+at (0, 0, 500) through that point.
 
 [@860.00]
-What will happen to this point?
+How to find out where it lands?
 
 [@862.00]
-We only know the z-axis and z-axis.
-
-[@864.00]
-We can't draw it.
+We only know that z = 0
+as it’s on the drawing surface.
 
 [@866.00]
 Okay.
@@ -1019,274 +974,284 @@ Okay.
 When we find the problem like this.
 
 [@869.00]
-We can model it as a problem.
+We can model it as…
 
-[@871.00]
-The sum of the 3 squares.
-
-[@873.00]
-This is probably a math problem.
+[@871.31]
+A problem of similar triangles.
 
 [@875.00]
-We have to find the height of the big 3 squares.
+I have to find the height
+of the big triangle.
 
 [@879.00]
 Let's start.
 
 [@880.00]
-We'll multiply the value we know.
-
-[@882.00]
-We'll get the height.
-
-[@884.00]
-The width of the big 3 squares and the small 3 squares.
+Using the values we know,
+we can find the widths.
 
 [@886.00]
-The height is the same.
+We do the same to the height.
 
 [@888.00]
-We'll get the problem of the 3 squares.
+And now we have our problem statement.
 
 [@891.00]
-We'll use it to make a sun.
+Solve it using the Rule of Three,
 
-[@893.00]
-And we'll get the height of the big 3 squares.
+[@894.44]
+And we’ll get the height
+of the big triangle.
 
-[@896.00]
-And we'll get the y value.
+[@896.53]
+And we’ll get the y value.
 
 [@898.00]
-And the x-axis is the same.
-
-[@901.00]
-We'll get 1 number.
+For the x-axis, we do the same
+and we’ll get another number.
 
 [@903.00]
-Now our 4 squares have 4 angles.
+Now our 4 squares have 4 corners.
 
 [@905.00]
-We'll do all 4 of them.
-
-[@907.00]
-And we'll do the x-axis.
+So we do the same to all 4 of them.
 
 [@909.00]
-We'll know that we'll find the impact point of each angle.
+We can now find the landing point
+through each corner.
 
 [@913.00]
-And we can calculate that.
+And we can now calculate that —
 
 [@916.00]
-If our 4 squares are jumping out.
-
-[@918.00]
-Where will it show up?
+If our squares is jumping out,
+where will it show up on the drawing?
 
 [@920.00]
-How do we draw it?
+Now we know how to draw it.
 
 [@922.00]
-This is called perfect projection.
+This is called “perspective projection.”
 
 [@926.00]
 It sounds like a very advanced technique.
 
 [@929.00]
-But actually it's using the y-axis or the y-axis.
+But actually it’s an application of
+the similar triangles problem.
 
 [@934.00]
-Now we draw the 3-dimensional picture with 2D canvas.
+Now we can draw 3D shapes
+using a 2D canvas.
 
 [@939.00]
-Next, we have to solve the problem of putting the 4 squares.
+Next, we have to solve the problem of
+putting the square in the right place.
 
-[@945.00]
-How do we place them in the middle of the picture?
+[@945.22]
+-
+
+[@946.91]
+First, how do we place a square
+in the middle of the picture?
 
 [@952.00]
-To create a square, we can look at the 4 points.
+To create a square,
 
-[@956.00]
-Instead of each angle.
+[@953.20]
+We can use 4 points to
+represent the 4 corners.
 
 [@958.00]
-Each point is called vertex.
+Each point is called a vertex.
 
 [@961.00]
-For example, the square is 50x50.
+In this example, the square is 50x50.
 
 [@964.00]
-The left point is the point of the y-axis.
+The top left corner is at this coordinate.
 
-[@969.00]
-Most of the points in the picture are used by the original point.
+[@970.11]
+The points will be represented
+by a vector from the origin.
 
-[@976.00]
-Most of the points are represented by the vector.
+[@976.58]
+We use vectors to represent vertices
 
-[@979.00]
-Like this.
+[@979.79]
+Something like this.
 
 [@981.00]
 Now we have all 4 points.
 
 [@983.00]
-We'll get a square.
+We’ll get a square.
 
 [@985.00]
 How do we move this square?
 
 [@987.00]
-We create a translation vector.
+We create another vector,
+a “translation” vector.
 
 [@992.00]
-We can connect the angles of the vectors to the angles of each point.
+We can connect the tail of this vector
+to the heads of each point’s vector.
 
 [@997.00]
 It will make the square move up like this.
 
 [@1000.00]
-We can solve 2 problems.
+I solved the first 2 problems.
 
 [@1002.00]
-The rest is just to make it jump out.
+Finally, I have to make it jump out.
 
 [@1005.00]
-Now, how do we make this square jump out?
+How to do that?
 
 [@1008.00]
-There are 2 problems.
+There are 2 sub-problems.
 
 [@1011.00]
 We will solve each problem.
 
 [@1014.00]
-It consists of 1.
-
-[@1016.00]
-The movement or the space.
+It consists of: 1. Translation.
 
 [@1019.00]
-The movement is just like this.
+The movement looks like this.
+It’s just jumping out.
 
 [@1023.00]
-There is also a rotation.
+And, 2. Rotation.
 
 [@1027.00]
-It rotates with the space.
+The rotation looks like this.
 
 [@1029.00]
-When we combine these 2 problems,
+When we combine these 2 sub-problems,
 
 [@1032.00]
 It will look like this.
 
 [@1035.00]
-Let's solve each problem.
+So, let’s solve each problem.
 
 [@1039.00]
 Let's start with jumping.
 
 [@1041.00]
-We have to calculate the vector.
+We have to find the translation vector.
 
-[@1043.00]
-How much time does the time of the t move like this?
+[@1043.91]
+At time t, how much does the square
+should move away from its place?
 
 [@1047.00]
-For example, the vector must have a certain value.
+Let’s say, t seconds passed.
+
+[@1051.45]
+How to find the appropriate yellow vector?
 
 [@1054.00]
 I will look at it from another angle.
 
 [@1057.00]
-It is a straight line.
+From the top, you see
+it’s a straight line.
 
 [@1059.00]
-It is a straight movement.
+This is linear movement.
 
 [@1061.00]
-S = Vt.
+s = vt.
 
 [@1063.00]
-Physics is here.
+Physics has entered the chat.
 
 [@1066.00]
-If we look at the side,
+If we look at it from the side,
 
 [@1070.00]
-We can see that the y-axis moves up and stops and moves down.
+We can see that in the y-axis,
+it moves up, and stops, and moves down.
 
 [@1074.00]
-It is a movement in the direction of the y-axis.
+That’s motion under gravity.
 
 [@1077.00]
-If it is at the 1/2th of the 2nd world,
+h = ut - ½gt².
 
 [@1080.00]
-The physics formula is full.
-
-[@1082.00]
-When combined, it will be a projectile movement.
+When combined, it will be
+a projectile movement.
 
 [@1085.00]
-I have to say that I hardly understand this rotation.
+For rotation, I have to say that
+I hardly understand it at all.
 
 [@1089.00]
-But I will try to explain.
+But I will try to explain anyways.
 
 [@1091.00]
 For rotation, we have to define 2 things.
 
 [@1093.00]
-1. The vector.
+1. The axis.
 
 [@1094.00]
 2. The angle.
 
 [@1096.00]
-Rotation is different from the movement.
+Rotation is different from translation.
 
-[@1099.00]
-Every point will move in the same direction.
+[@1098.69]
+For translation, every point
+will move in the same direction.
 
-[@1102.00]
-The rotation will go in different directions.
+[@1101.72]
+But in rotation, each point
+will move differently.
 
-[@1104.00]
+[@1103.94]
 But in the end, it will look like this.
 
 [@1106.00]
-This is 2D.
+But that’s 2D rotation.
 
 [@1109.00]
 What if it is 3D?
 
 [@1111.00]
-If it is 2D, the angle is a point.
+In 2D, the angle is a point.
 
 [@1116.00]
-But if it is 3D, the angle is a vector.
+But in 3D, the angle is a vector.
 
 [@1119.00]
-I will replace the vector with this ball-plug.
+I’ll use this stick to
+represent that vector.
 
 [@1122.00]
-The way to rotate the x-axis is to let the wood point to the x-axis.
+To rotate around the x-axis,
 
-[@1128.00]
-And then rotate the y-axis.
+[@1125.64]
+Point the stick along
+the x-axis and rotate.
 
-[@1131.00]
-And rotate the z-axis.
+[@1129.24]
+Around the y-axis looks like this.
+
+[@1132.71]
+And around the z-axis looks like this.
 
 [@1135.00]
-In addition to the x-axis, we can rotate any axis.
+In addition to the main axes, actually
+we can rotate around any axis,
 
 [@1139.00]
-For example, insert a square vector and rotate it.
+As you can see in the example.
 
 [@1145.00]
 It will look like this.
@@ -1295,226 +1260,262 @@ It will look like this.
 How to implement?
 
 [@1149.00]
-I have to search on Google.
-
-[@1151.00]
-How to rotate the 3D vector.
+I searched on Google, how to rotate
+the 3D vector around a 3D axis.
 
 [@1154.00]
-I found this website.
+I found this web page that
+gives me the rotation formula.
 
-[@1156.00]
-There is a 5-way rotation formula.
+[@1158.95]
+It’s five lines long.
 
-[@1160.00]
-I will write it down.
+[@1161.58]
+I reformatted it a little bit.
 
 [@1164.00]
-In short, the right side is the point that we want to rotate.
+In short, the right side is
+the point that we want to rotate.
 
 [@1170.00]
 The middle is the rotation matrix.
 
-[@1172.00]
-I don't know what rotation matrix is.
+[@1172.20]
+It’s black magic to me.
+I don’t understand it at all.
 
-[@1174.00]
-I just found it from that website.
+[@1174.78]
+I just copied it from there.
 
 [@1176.00]
-The left side is the point that we need to use.
+The left side is the resulting point.
 
 [@1179.00]
-As I said, I don't understand.
+As I said, I don’t understand it at all.
 
 [@1181.00]
-Yesterday, I went to practice talking.
+Yesterday, I practiced this talk,
 
 [@1183.00]
-Someone asked me if I knew the quaternion matrix.
+And an audience asked me if I knew
+what a QuAtErNiOn MaTrIx is.
 
-[@1186.00]
-I don't know.
+[@1185.60]
+And I was like,
+
+[@1186.53]
+Nope.
 
 [@1188.00]
-I will try to understand the quaternion matrix.
+To make it better, I will have to
+re-learn the fundamentals
+
+[@1192.52]
+So I can understand how the
+matrix in the middle came to be.
 
 [@1196.00]
-But I didn't know it.
+But that day hasn’t come yet.
 
 [@1198.00]
-So I used this formula as a code.
+So I just took the formula and
+turned it into JavaScript code.
 
 [@1203.00]
-With the power of quaternion, it came out like this.
+And with the power of mathematics,
+
+[@1207.22]
+It worked!
 
 [@1209.00]
 I solved all 4 problems.
 
 [@1211.00]
-I created one part of the QR code.
+I can now create one piece of the QR code.
 
 [@1214.00]
-The rest is to combine the solutions to solve the problem.
+The rest is to combine the solutions
+and solve the main problem.
 
 [@1218.00]
-Compare with tera pixel.
+Compare each pixel.
 
 [@1220.00]
-If the color changes, create one sprite.
+If the color changes, create a sprite.
 
 [@1223.00]
-Each sprite has a random position.
+Each sprite has a position.
 
-[@1229.00]
-The speed of movement, the speed of rotation, etc.
+[@1228.19]
+Randomize the speed of movement,
+the speed of rotation, etc.
 
 [@1233.00]
-I used everything I presented earlier as a function.
+I used everything I presented earlier
+and put it into the drawing function.
 
 [@1238.00]
-When I put it together, I got the QR code.
+When I put it together,
+I got the animation I want.
 
 [@1241.00]
-But it was lagging.
+But it wasn’t smooth.
 
-[@1244.00]
+[@1243.96]
+Sometimes it even froze.
+
+[@1245.93]
 It was lagging on my phone.
 
 [@1247.00]
 Because when I use a canvas to draw,
 
 [@1250.00]
-the CPU has to cut the part of the image to draw the pixel.
+The CPU has to loop through each piece,
+calculate, and draw each pixel one by one.
 
 [@1256.00]
 The CPU works very hard.
 
 [@1258.00]
-So I didn't open this feature for everyone to use.
+So I didn’t enable this feature
+for everyone to use.
 
 [@1261.00]
-If I open it for everyone to use, it will be a substitute for the app.
+Otherwise it might become
+a battery drainer app.
 
 [@1265.00]
 So I have to re-implement with WebGL.
 
 [@1268.00]
-
+-
 
 [@1270.00]
-But when I implemented WebGL,
+But when I implemented in WebGL,
 
 [@1273.00]
-I found that it was better to implement with Canvas first.
+I realized it was a good thing I tried
+implementing it with Canvas first.
 
 [@1276.00]
-When I used WebGL directly without using a library,
+When I used WebGL directly
+without using a library,
 
 [@1279.00]
-I found that the calculation of the numbers didn't help.
+I found that WebGL doesn’t help at all
+with the maths formulas involved.
 
 [@1283.00]
-WebGL helps just to calculate the data at the same time.
+WebGL just helps parallelize
+the calculation and make it faster.
 
 [@1286.00]
-In the end, I had to implement all the calculation methods.
+But the formula shown before,
+I still had to implement it all —
 
-[@1289.00]
-I had to practice writing new languages.
+[@1289.88]
+In another language.
 
 [@1291.00]
-I had to write another language called GLSL.
+Now I can’t just write JavaScript;
+I also had to write GLSL.
 
 [@1294.00]
-It's a language that's similar to C Compile on the GPU.
+It's a C-like language that can be
+compiled to run on a GPU.
 
 [@1298.00]
-GLSL helps calculate the matrix and vector.
+GLSL also helps with multiplying
+vectors and matrices.
 
 [@1301.00]
-JavaScript has to be divided into 5 parts.
+In JavaScript, I’d have to
+spell out each element.
 
 [@1304.00]
-GLSL has a matrix and a vector type.
+But in GLSL, there’s a
+built-in matrix and a vector types.
 
-[@1307.00]
-It can be multiplied.
+[@1306.35]
+They can be multiplied together easily.
 
 [@1308.00]
-In addition, it helps draw many pixels at the same time.
+In addition, it helps with drawing
+many pixels at the same time.
 
 [@1311.00]
-But the ability is very basic.
+But it’s ability is very basic.
 
-[@1314.00]
-It can't just draw a square.
+[@1313.80]
+It can't even draw a square.
 
-[@1315.00]
-The square that you see is made up of two triangles.
+[@1315.61]
+Each square that you see here
+
+[@1317.55]
+Is made up of two triangles.
 
 [@1319.00]
-WebGL can draw it.
+Then WebGL can draw it.
 
 [@1321.00]
-From the original data that is stored in the RAM,
+From the original data that is
+stored in the RAM (JavaScript heap)
 
 [@1324.00]
-and using the CPU to process the result,
+And processed by the CPU,
 
 [@1326.00]
-we have to process it into a buffer.
-
-[@1329.00]
-Then we upload it to the GPU.
+I had to process it into a buffer
+and upload it to the GPU first.
 
 [@1332.00]
-Then upload GLSL to the GPU to work.
+And also compiled and upload the
+GLSL program for the GPU to work with.
 
 [@1335.00]
-Each of the three triangles will represent one triangle.
+Every 3 lines will represent one triangle.
 
 [@1340.00]
 Each buffer has a different role.
 
-[@1343.00]
-The first two are for color.
+[@1343.33]
+The first two are for putting the
+triangles together and setting its color.
 
-[@1346.00]
+[@1347.68]
 The last two are for rotation.
 
 [@1349.00]
-This one makes it pop out.
+This one places it at the right place.
 
 [@1352.00]
-And this one makes it bounce.
+And this one makes it pop out.
 
 [@1354.00]
 Something like this.
 
 [@1355.00]
-When we order the draw element,
-
-[@1358.00]
-the GPU will draw a whole bunch.
+When we call `drawElements`,
+the GPU will draw a whole image.
 
 [@1361.00]
-It makes the animation smooth and fast.
+Now the animation is smooth and fast.
 
 [@1365.00]
-I hope I will get the answer.
-
-[@1368.00]
-What it uses after learning the numbers.
+I hope you’ll see how maths
+can one day become very useful!
 
 [@1371.00]
 I will post all the code here.
 
 [@1376.00]
-Including the visualizations that you see in this slide.
+Including the visualizations
+that you see in the slides.
 
 [@1379.00]
-There are all source codes.
+The source codes are available.
 
 [@1381.00]
 You can go and see.
@@ -1523,22 +1524,18 @@ You can go and see.
 Before we go,
 
 [@1383.00]
-I'm from the Creator's Garden group.
+I'm from the Creatorsgarten group.
 
 [@1387.00]
-We organize tech events.
-
-[@1390.00]
-Every event is free.
+We organize free tech events.
 
 [@1392.00]
-In the future, we have a plan to organize a creative coding meetup.
+In the future, we plan to organize
+a creative coding meetup.
 
 [@1396.00]
-For those who are interested in drawing with code,
-
-[@1399.00]
-or creating art pictures, or anything else with code.
+For those who are interested
+in making arts with code,
 
 [@1402.00]
 If you like this type, please stay tuned.
@@ -1547,7 +1544,7 @@ If you like this type, please stay tuned.
 I don't know when it will be held.
 
 [@1406.00]
-That's all for today.
+But that’s all for today.
 
 [@1409.00]
 Thank you very much.
