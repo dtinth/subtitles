@@ -2,13 +2,20 @@
 Hello everyone.
 
 [@2.00]
-When I was in the first year of high school, there was a very difficult subject.
+When I was a student,
 
-[@10.00]
-Many people should have guessed that it was a math subject.
+[@7.00]
+There was one very difficult subject.
+
+[@10.54]
+As you might have guessed,
+
+[@12.26]
+It was a math subject.
 
 [@14.00]
-Especially the calculus, trigonometric, and vector matrix.
+Especially calculus, trigonometry,
+vectors, and matrices.
 
 [@18.00]
 When I was studying, I wasn't into math.
@@ -16,146 +23,169 @@ When I was studying, I wasn't into math.
 [@21.00]
 I had to memorize a lot of formulas.
 
-[@24.00]
-This is the diff formula. I have to memorize this formula to take the exam.
+[@22.87]
+Here’s the derivatives formulas.
 
-[@27.00]
-When I came to study math, I had to memorize another set of formulas.
+[@24.75]
+I have to memorize it to take the exam.
 
-[@30.00]
-Some people might think that math is beautiful, but I think it's a lot of formulas.
+[@26.59]
+When I came to study matrices,
+
+[@27.89]
+I had to memorize another set of formulas.
+
+[@29.70]
+Some might think “maths is beautiful,”
+But I think it's a lot of formulas.
 
 [@34.00]
-So I didn't know much about math.
+So I didn’t understand maths well.
 
 [@36.00]
-Even though I learned a lot of formulas, I didn't know when I would use them.
+Even the parts I do understand,
+I don’t know what to do with them.
 
 [@40.00]
-For example, the determinant formula, right?
+Here, the determinant formula.
 
-[@42.00]
-AD - BC.
+[@41.79]
+ad - bc
 
 [@44.00]
-I didn't know what I got when I took the exam.
+Why do I need to find “ad - bc?”
 
 [@46.00]
-So I didn't intend to study at that time.
+So I didn’t study it well at that time.
 
 [@48.00]
-I got grade C+ in math 1 and math 2.
+I got grade C+ in Math 1 and Math 2.
 
 [@51.00]
 That was around 2011.
 
 [@53.00]
-In 2018, I had a project.
+In 2018, I worked on a project.
 
 [@57.00]
-I used the concepts and formulas that I didn't intend to study.
+And many concepts and formulas that
+I didn’t study well —
 
 [@61.00]
-I got them back.
+They all come back.
 
 [@63.00]
 So I want to tell you about this project.
 
 [@65.00]
-I have to tell you that the project I'm going to tell you about is not a project that I work on.
+By the way, it’s not a project at work.
 
 [@69.00]
-It's a project that I did as an Adelaide project.
+It’s a my side-project
+that I did as a hobby.
 
 [@72.00]
-That project is called PPQR.app.
+That project is called “ppqr.app.”
 
 [@75.00]
 I will introduce this project briefly.
 
 [@77.00]
-This is a web application that creates a QR code for receiving money through Pay.
+It is a web application that creates
+
+[@79.71]
+QR code for receiving money
+via PromptPay.
 
 [@82.00]
-This QR code can scan mobile banking apps to transfer money.
+Mobile banking apps can scan the
+QR code to transfer money.
 
 [@87.00]
-With this app, I designed it to focus on the convenience of using it as a base.
+This app is optimized
+to be used quickly and easily.
 
 [@91.00]
-For example, I went to eat with my friends.
+Let’s say I went to eat with my friends.
 
 [@93.00]
-And let's say I agree that I will go out first.
-
-[@97.00]
-And I will pay 80 baht each.
+I paid first. We agreed to split evenly.
+Each of us pays 80 baht.
 
 [@99.00]
-I will have to open the application.
+I can open the application,
 
 [@102.00]
-I will type in the number 80 and show the QR code.
+Type in “80” and show the QR code
 
 [@105.00]
-So that my friends can use mobile banking to scan.
+So that my friends can use
+their mobile banking apps to scan —
 
 [@108.00]
-Within less than 5 seconds.
+All of this — in less than 5 seconds.
 
 [@110.00]
 
 
 [@111.00]
-Then I started to have a number of PromPay numbers.
+Then I started to have
+several PromptPay numbers.
 
 [@114.00]
-Because now there are a lot of e-wallets of TooMoney, K+ and many more.
+Now there are many e-wallet providers
+
+[@117.18]
+e.g. TrueMoney, K PLUS, etc.
 
 [@120.00]
-And before we had to enter the correct bank app.
+Before this app, I had to
+go to the correct bank app.
 
 [@123.00]
-Now I can put the number of PromPay in 4 slots.
+But now “ppqr.app” has 4 slots
+for storing different PromptPay IDs.
 
 [@128.00]
-And before this app was called PromPay 2 Me.
+Previously this app was called
+“promptpay2.me.”
 
-[@132.00]
-I tried to show this app to others.
+[@131.91]
+I showed this app to my friends
+and got them to try it out —
 
-[@134.00]
-It turned out that this is not an app. It's a web.
+[@135.34]
+(It’s a web app, not a native app)
 
 [@137.00]
-I found that almost no one had typed in the correct number of PromPay.
+I found that almost no one could
+spelll PromptPay correctly first try!
 
 [@142.00]
-So I changed the name to PPQR.app.
+So I changed the name to “ppqr.app.”
 
 [@144.00]
 If anyone is interested, you can try it.
 
 [@147.00]
-There is a feature in the app.
+There is one weird feature in the app.
 
 [@150.00]
-It is the animation in the app.
+It is the animations within the app.
 
 [@153.00]
-When you transfer money, you have to enter a new QR code.
-
-[@156.00]
-Let the number change.
+When you enter the amount,
+it has to generate a new QR code.
 
 [@158.00]
-But I don't want the QR code to change.
-
-[@160.00]
-It's too normal.
+But I don't want the QR code
+to just change. It's too normal.
 
 [@162.00]
-I want the QR code to pop out like this.
+I want the QR code to…
+
+[@163.69]
+pop out… like this.
 
 [@166.00]
 
@@ -167,103 +197,116 @@ I want it to pop out of the screen.
 I spent many days trying to do this.
 
 [@173.00]
-And the mathematics that I didn't intend to study, it's all back.
+And the maths that I didn’t study well —
+
+[@175.94]
+They all came back.
 
 [@177.00]
-And I have to come to understand it again.
+And I had to try to understand it again.
 
 [@180.00]
-I think if I know more numbers, I should be able to do it faster.
+And I thought: Things would be easier
+had I studied maths well!
 
 [@183.00]
 But in the end, I got through.
 
 [@185.00]
-I got a new feature.
+I got a new wacky feature.
 
 [@187.00]
-Is it useful? No.
+Is it useful?
 
-[@189.00]
+[@188.78]
+No.
+
+[@190.00]
 But I think it looks cool.
 
 [@192.00]
-And it's fun when we solve problems.
+And it's fun when to solve problems.
 
 [@195.00]
-And when we get through the difficult problems,
+And when I get through difficult problems,
 
 [@197.00]
-We feel like we're an upgraded programmer.
+I feel like I have leveled up
+in my programming journey,
 
 [@201.00]
-Learn something new.
+Having learned something new.
 
 [@204.00]
-Today, I want to share my experience.
+Today, I want to share my experience,
 
 [@207.00]
-Tell about this feature development.
+My story about this feature’s development.
 
 [@209.00]
-If you want to know how this animation was created,
+If you want to know how
+this animation was created,
 
 [@212.00]
-I'll tell you in 20 minutes.
+I’ll tell you in the next 20 minutes.
 
 [@214.00]
-And if anyone is interested in computer graphics,
+And if anyone is interested
+in computer graphics,
 
 [@217.00]
-How computers render graphics,
+If you’re curious about
+how computers render graphics,
 
 [@220.00]
-You may learn more about computer graphics.
+This may serve as a teaser for
+what you might learn.
 
 [@223.00]
 
 
 [@224.00]
-I have to tell you that today's content is very dense.
+By the way, today’s content is very dense.
 
 [@227.00]
 My slides are about 200 pages.
 
 [@229.00]
-Some details are not understood.
+If you don’t understand some details,
 
 [@232.00]
 It's okay.
 
 [@234.00]
-At least you'll get a keyword that goes through your head, eyes, ears.
+At least you’ll see and hear some keywords
 
-[@238.00]
-And you can study it yourself if you're interested.
+[@237.90]
+And you can study it yourself
+if you're interested.
 
-[@240.00]
-And I got inspiration from many creators on YouTube.
+[@241.39]
+I got my inspirations from
+many creators on YouTube
 
 [@245.00]
-They told me how they did the project.
+who shares how they build a project.
 
 [@248.00]
-I think it's very open-world.
+I think they are very eye-opening.
 
 [@250.00]
-I want to try to present this topic.
+I want to try to present similar content.
 
 [@254.00]
-Another thing is that I'm not like...
-
-[@257.00]
-I can do it in 2018.
+Another thing is that it’s not like
+I can do it in 2018 in a single try.
 
 [@259.00]
-I'm from grade 4+
+In 2011 I got C+ grades.
 
 [@261.00]
-And I've gained experience by doing this and that.
+Then over time I slowly acquire
+experience working on fun projects.
 
 [@265.00]
 Keep playing.
@@ -275,115 +318,93 @@ This is the introduction for today's talk.
 Let me introduce myself briefly.
 
 [@273.00]
-My name is Tine.
+My name is Thai.
 
 [@274.00]
-I'm a software engineer at Eventpop.
-
-[@276.00]
-Under Open company.
+I'm a software engineer
+at Eventpop, under Opn.
 
 [@278.00]
-Open company does payment.
+Opn is a payment tech company.
+We have a payment gateway.
 
-[@281.00]
-Payment takes and get way.
-
-[@283.00]
-Many people may know it.
-
-[@285.00]
+[@283.16]
 It used to be called Omise.
+You might know about it.
 
-[@287.00]
+[@286.51]
 Besides being a product company,
 
 [@288.00]
-Open also has a team that is professional service.
+Opn also has a professional services team
 
 [@291.00]
-It's a combination of system integrator and consultant.
+Like a combination of SI and consultant.
 
 [@294.00]
-It helps digital transformation.
+Opn.Pro helps with digital transformation.
 
-[@296.00]
-For customers to receive projects from enterprise.
-
-[@299.00]
-Something like this.
+[@297.82]
+We take on enterprise projects.
 
 [@300.00]
-Now I'm working on the team of Eventpop.
+Now I'm working on Eventpop.
 
 [@303.00]
-If anyone has an event, they can try it.
+If anyone runs an event,
+you’re welcome to try it out.
 
 [@306.00]
-I have a YouTube channel.
+And I have a YouTube channel.
 
 [@308.00]
-If you like this session, you can subscribe.
+If you like this session,
+please consider subscribing!
 
 [@312.00]
-The channel is DTINTH.
+The channel is dtinth.
 
 [@315.00]
-I'll be in the last slide.
+It’ll be on the last slide.
 
 [@318.00]
-And before this, I used to do this.
-
-[@322.00]
-And live on Facebook.
+Previously, I streamed this
+live on Facebook.
 
 [@324.00]
-You can see that I live 2 parts.
-
-[@326.00]
-I eat for almost 4 hours.
-
-[@328.00]
-More than 3 hours.
+There are 2 parts totaling over 3 hours.
 
 [@329.00]
-And this is not all.
-
-[@331.00]
-There are many parts that I have to go through.
+And there are many parts that
+I worked alone and didn’t stream.
 
 [@333.00]
-Today I will bring the live.
-
-[@336.00]
-The live that is very live.
+Today I’ll take that live content,
+where I was unprepared and struggling —
 
 [@339.00]
-I'll make it easier to see.
+And retell the story in a way
+that’s can be understood more easily.
 
 [@342.00]
-So let's get into the story.
+So let’s get into it!
 
 [@345.00]
 The app can create a QR code.
 
 [@348.00]
-But when changing the QR code, it's just a re-render.
+But when changing the QR code,
+it’s just a re-render.
 
 [@351.00]
-This time I want to put animation in.
+Now I want to put animations in.
 
 [@353.00]
 How do we do it?
 
-[@354.00]
-Make it an animation.
-
 [@355.00]
-But what I want to do is,
-
-[@357.00]
-I don't want it to hit the old code too much.
+However, I don't want it to
+affect the existing code too much.
 
 [@362.00]
 What should I do?
@@ -392,106 +413,96 @@ What should I do?
 I decided to divide it into 2 layers.
 
 [@366.00]
-The first layer is the same.
-
-[@368.00]
-The same QR code.
+The first layer is the original QR code.
 
 [@370.00]
 But when the number changes,
 
 [@372.00]
-And we calculate the new QR code.
+And the new QR code is being rendered,
 
 [@374.00]
-Let's compare it per pixel.
-
-[@376.00]
-Which pixel to change.
+I’ll compare each pixel.
 
 [@377.00]
 If the pixel changes,
 
-[@379.00]
-Let's create a sprite.
-
-[@381.00]
-Create a part.
+[@378.95]
+I’ll create a sprite, or a particle.
 
 [@382.00]
-And put another layer.
+And put it on another layer.
 
 [@384.00]
 When you put the two layers together,
 
 [@386.00]
-It will be the animation we want.
+It will be the animation I want.
 
 [@388.00]
-Today we will focus on the layer effect.
+Today we will focus on the effect layer.
 
 [@392.00]
 I'll show you slowly again.
 
 [@395.00]
-The one with the green box is the layer effect.
+The one with the green halo
+is the effect layer.
 
-[@398.00]
-The first thing we have to do is,
+[@399.92]
+Ok! Now, the first thing we have to do is…
 
 [@403.00]
-We have to render this one piece.
+We have to render this one piece first
 
 [@406.00]
-Before we render everything.
+Before we can render everything.
 
 [@409.00]
 Here comes the first problem.
 
 [@411.00]
-How to render a particle?
+How to render a single particle?
 
 [@413.00]
-With performance requirement.
+There’s also performance requirement:
 
 [@415.00]
 It must be small and fast.
 
 [@418.00]
-It must not make the app too big.
+1. It must not make the app too big.
 
 [@420.00]
 Otherwise, it will load slowly.
 
 [@422.00]
-When the app loads slowly,
+When the app loads slowly, it kinda
+defeats the purpose, right?
 
-[@424.00]
-It will be mixed, right?
-
-[@425.00]
-5 seconds.
+[@424.98]
+The 5 second rule.
 
 [@426.00]
-Second, it must be fast.
+2. It must be fast.
 
 [@428.00]
-No matter how many QR codes we have,
+No matter how many QR code particles,
 
 [@431.00]
-It must render 60 frames all the time.
+It must always render at 60 fps.
 
 [@434.00]
-Otherwise, it may look bad.
+Otherwise, it may drain the battery.
 
 [@438.00]
 And it may not look smooth.
 
 [@441.00]
-When it comes to the 3D effect,
+When it comes to 3D effects,
 
 [@444.00]
-We may think of 3JS.
+We may think of THREE.js.
 
 [@446.00]
 I tried it before.
@@ -506,40 +517,39 @@ Put the object in the scene.
 Put the camera, light, and color.
 
 [@453.00]
-And then we can render it.
-
-[@454.00]
-We can get a beautiful scene.
+And then we can render it
+and get a beautiful scene.
 
 [@456.00]
-But the problem is the library is quite big.
+But the problem is
+the library is quite big.
 
 [@458.00]
-The app that PQR is now,
-
-[@460.00]
-It's about 52 KB.
+The ppqr app is now about 52 KB.
 
 [@462.00]
-But if we put 3JS in it,
+But if we put THREE.js in it,
 
-[@464.00]
+[@463.46]
 The app will be 4 times bigger.
 
 [@465.00]
-So we can't accept it.
+So I had to discard this choice.
 
-[@467.00]
-So we have to cut this choice.
+[@468.62]
+And I thought:
 
-[@469.00]
-And we think that since we have to control the size of the code,
+[@469.54]
+Since I need to control
+the total code size,
 
-[@473.00]
-We may have to implement it without using the library.
+[@472.56]
+I might as well implement it
+without using a library.
 
 [@475.00]
-We can fully control the size of the code.
+So that I can fully control
+how much code I add in.
 
 [@478.00]
 There are two options.
@@ -551,196 +561,165 @@ Use Canvas and WebGL.
 I've never used WebGL.
 
 [@484.00]
-I studied how to use WebGL.
+So I tried to learn.
 
 [@486.00]
-There is a web called WebGL Fundamentals.
+There is a website called
+WebGL Fundamentals.
 
 [@489.00]
 If you click on the first link,
-
-[@490.00]
-Fundamentals link,
+(“Fundamentals”),
 
 [@492.00]
-There will be a code example.
+You will find a code example
+on how to render…
 
-[@493.00]
-How to render a 3D object.
+[@494.68]
+A single triangle.
 
 [@497.00]
-I tried to implement it into Canvas.
+I tried to implement it with Canvas.
 
 [@499.00]
-Like this.
+It looks like this.
 
 [@500.00]
 I set the color,
 
 [@502.00]
-And I started drawing a picture.
-
-[@504.00]
-And I ordered it to render.
+Drawing a shape, and ordered it
+to fill in the shape.
 
 [@505.00]
-But when it's WebGL,
+But when it’s WebGL,
 
 [@507.00]
-I don't know what code to find.
-
-[@509.00]
-It's like C.
+I’m confused. I saw some C-like code
+embedded in JavaScript.
 
 [@510.00]
-And there's something like Shader,
+And there’s many unknown terms like
 
-[@512.00]
-Compile,
-
-[@513.00]
-Compile Shader,
-
-[@514.00]
-Put a buffer,
-
-[@515.00]
-Buy buffer,
-
-[@516.00]
-Clear.
-
-[@517.00]
-Set the program,
-
-[@518.00]
-Put a vertex attribute array.
+[@512.19]
+Shader, Compile, Buffer, Bind Buffer,
+Program, Vertex Attribute Array.
 
 [@519.00]
 I saw it and I was scared.
 
 [@521.00]
-So I said, "Okay, I'll use Canvas first."
+So I was like, “Okay,
+I’ll just use Canvas first.”
 
 [@523.00]
-The downside of Canvas is that everything will work on the CPU.
+The downside of Canvas is that
+everything will work on the CPU.
 
 [@528.00]
-You can't use GPU's capabilities.
+We can’t use GPU’s capabilities.
 
 [@530.00]
-But I think, at least we can do it easily.
+But I think,
 
-[@533.00]
-If it's fast enough, that's good.
+[@531.77]
+“At least I’ll do the easy version first.
+If it’s fast enough, then that’s great.”
 
-[@535.00]
+[@536.14]
 If it's not fast enough,
-
-[@536.00]
 Then study more.
 
 [@538.00]
-So, let's go to Canvas.
+So, let’s go to Canvas.
 
 [@541.00]
 How to use Canvas?
 
 [@542.00]
-Canvas is like an API on the web.
+Canvas 2D is an API on the web.
 
 [@545.00]
-That can draw two meters.
+That can draw 2D graphics.
 
 [@547.00]
-It's like we have a blank sheet of paper.
+It’s like we have a blank sheet of paper.
 
 [@549.00]
-It can determine the height.
+I can set its with and height.
 
 [@551.00]
-For example, in this case,
-
-[@552.00]
-500 high 500.
+For instance, in this case, 500 by 500.
 
 [@554.00]
-And we'll have a picker system.
-
-[@556.00]
-We get a S and a Y.
+And there’s a coordinate system
+with an X axis and a Y axis.
 
 [@558.00]
-And there will be a origin point.
+And there’s an origin point.
 
 [@562.00]
-The zero point will be on the left of the image.
+The (0, 0) point will be on
+the top left corner of the image.
 
 [@565.00]
-The right bottom point will be the height.
+The bottom right corner,
+well, it depends on the size
 
 [@568.00]
-The right bottom point is 500 high 500.
+In this case, (500, 500).
 
 [@570.00]
 When we draw a picture,
 
 [@572.00]
-We'll order Begin Part.
+We start with `.beginPath()`.
 
 [@574.00]
-And we'll order Move To.
+And then we call `.moveTo(x, y)`.
 
 [@576.00]
-Move To is like sticking a pen to the point we've set.
+`moveTo` is like putting a pen
+on the paper at the specified point.
 
 [@580.00]
-That point starts from the origin,
-
-[@582.00]
-Starts at 145 right and down to 350.
+Starting from the origin,
+145 pixels right, 350 pixels down —
 
 [@584.00]
-It's like sticking a pen to that point.
+It’s like putting a pen at that point.
 
 [@587.00]
-Line To is like drawing a line.
+`.lineTo(x, y)` is for drawing a line.
 
 [@590.00]
 Draw all four of them.
 
 [@592.00]
-And then we'll order Close Part.
-
-[@594.00]
-It's like drawing a line back to the origin point.
+And then `.closePath()`, which is like
+drawing a line back to the starting point.
 
 [@596.00]
 We won't see the picture yet.
 
 [@598.00]
-Because we haven't ordered it to draw or color.
+Because we haven’t told it to draw.
 
 [@600.00]
-We have to set the color and order the fill.
-
-[@602.00]
-Fill is to color.
+We have to set the color
+and call `.fill()`.
 
 [@604.00]
-Or you can order it to be stroke.
-
-[@606.00]
-It's like drawing a line.
+Or you can also use `.stroke()`
 
 [@608.00]
-Or you can color it to gradient.
+Or you can use gradients.
 
 [@610.00]
-But for today's topic,
+But for today’s problem,
 
 [@612.00]
-White is enough.
+Just filling white in is enough.
 
 [@614.00]
 Now we might see our square as
@@ -1574,11 +1553,3 @@ That's all for today.
 Thank you very much.
 
 [@1411.00]
-(Applause)
-
-[@1416.00]
-[GEN Y The Series]
-
-[@1418.00]
-
-
