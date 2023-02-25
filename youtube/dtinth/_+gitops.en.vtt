@@ -609,211 +609,273 @@ how do we do manual operation?
 Go to the Portal and do things one by one.
 
 [@654.00]
-Review, Create, Create,
+Create, Fill in forms, Review + Create, …
+
+[@657.72]
+There are many steps involved.
+
+[@660.74]
+Actually Azure is pretty easy already.
+
+[@662.84]
+Once the resource is created
+
+[@664.40]
+I get a connection string
+that I can use immediately
+
+[@667.59]
+In some providers I have to create a user.
+
+[@669.58]
+Then put a user in a group.
+
+[@670.76]
+And then create a role.
 
 [@672.00]
-Assign to the group and attach to the group.
+And then assign that role to the group.
+
+[@674.07]
+And then attach a policy to the role.
 
 [@676.00]
-Or create a service account, create a key, etc.
+Or maybe I have to create a
+service account, create a key, etc.
 
 [@680.00]
-If we do many of these, this is an easy example.
+If we have to do a lot of of these —
+
+[@684.21]
+By the way this is an contrived example.
 
 [@686.00]
-If we do many of these, it’s very easy.
+If we have to do a lot of of these,
 
-[@688.00]
-I don’t have many examples.
+[@687.62]
+It can be error-prone.
 
-[@690.00]
-I don’t have an advanced system.
+[@688.56]
+I don’t have any example of a big system
 
 [@692.00]
-So I stole the slide first.
+So I’ll steal the slide
 
-[@694.00]
-Thank you, Khun Pong, for letting me steal the slide.
+[@695.60]
+From the previous speaker, k’ Pong.
+
+[@699.99]
+Thank you for that slide.
 
 [@702.00]
 There are many customers, right?
 
 [@705.00]
-You have to take care of the system a lot.
+Lots of resources to manage.
 
-[@707.00]
-If we have a lot of systems, one way to fix it is to do scripts and do automation.
+[@708.60]
+If we have to do same thing many times,
+
+[@712.49]
+One way to improve is to
+create scripts and do automation.
 
 [@715.00]
-For example, I use Azure CLI to create resources.
+For example, I use Azure CLI
+to create resources.
 
 [@720.00]
 As I showed you earlier.
 
 [@722.00]
-The problem is that this script can only be created.
+The problem is that this script
+only lets me create resources.
 
 [@725.00]
-If you want to delete it, you have to write another script.
+If I want to delete,
+then I have to write another script.
 
 [@727.00]
-And if I create and there’s something wrong, what should I do?
+And if I try to create
+and there’s something wrong,
+
+[@730.14]
+What should I do?
 
 [@731.00]
-I might have to delete it.
-
-[@733.00]
-I might have to run the script and then run the script to create.
+I might have to run the delete script
+and then run the create script again.
 
 [@735.00]
-And sometimes if we run the creation command and it dies in the middle of the way,
+And sometimes if we run the create script
+
+[@737.73]
+And it fails midway?
 
 [@739.00]
-When we run it again, we can’t run it again because the object is created in the middle.
+And when we run it again, it doesn’t work
 
-[@745.00]
-We have to delete it and then create a new one.
+[@743.30]
+Because some objects alrady exist.
+
+[@744.76]
+We have to delete and then
+create the whole thing again.
 
 [@747.00]
 This is a problem of running scripts.
 
 [@750.00]
-But as far as I’ve tested, this script doesn’t have any problems.
+But as far as I’ve tested, this script
+doesn’t have any problems running twice.
 
 [@755.00]
-Because Azure has designed that if we create what we have and all the parameters are the same, it will be considered successful.
+Because in Azure, if we try to
+create something that already exists
+
+[@758.60]
+And all the parameters match up,
+it will be considered successful.
 
 [@762.00]
-Now let’s see what GitOps is.
+Now let’s see what happens with GitOps.
 
 [@766.00]
-If we use GitOps, back to the first principle.
+Back to the first principle.
 
 [@772.00]
-We have to be able to explain our system in a declarative way.
+We have to be able to describe
+our system in a declarative way.
 
 [@777.00]
-I don’t know how to translate it to be declarative.
-
-[@781.00]
-Can anyone translate it for me?
+I’m not sure how to say “declarative”
+in Thai. Can anyone translate it for me?
 
 [@783.00]
-What is declarative in Thai?
+What is “declarative” in Thai?
 
 [@785.00]
-It’s pronounced.
+(Audience) It’s declared.
 
 [@787.00]
 The opposite word is imperative.
 
-[@791.00]
-It’s like a command.
+[@792.51]
+(Audience) It’s like a command.
 
-[@793.00]
+[@794.29]
 Thank you very much.
 
-[@795.00]
-Because in the slides, I didn’t prepare at all.
+[@796.18]
+When I prepared this talk,
+I couldn’t find any good translation.
 
-[@798.00]
-How to translate it into Thai.
+[@799.81]
+So I’ll teach these English terms
+by giving you some examples.
 
-[@800.00]
-But I’ll give you an example.
-
-[@802.00]
-If imperative, we tell you what to do, right?
+[@804.14]
+Imperative means I specify what to do.
 
 [@807.00]
-It’s like a step.
+It’s like a step-by-step instructions.
 
 [@809.00]
 Create this, create that, create this.
 
 [@811.00]
-Imperative is telling you what to do.
+Imperative is telling what to do.
 
 [@814.00]
-Or script is imperative too.
+A script is considered imperative too.
 
 [@817.00]
-If you look at it from a different perspective, declarative.
+On the other hand, “Declarative” —
 
 [@821.00]
-We don’t tell you how to do it.
+We don’t specify how to do it.
 
 [@823.00]
-We just tell you what we want.
+We just specify what we want.
 
-[@825.00]
-We want a resource group with a lock analytic workspace that is linked to this resource group.
+[@824.43]
+We want a Resource group
 
-[@829.00]
-This is what we want.
+[@825.61]
+With a Log Analytics workspace that is
+linked to this Resource group.
 
-[@833.00]
+[@828.62]
+And an Application Insights component
+linked to this Workspace.
+
+[@833.83]
+This is what I want.
+
+[@835.25]
 How do we set it?
 
-[@835.00]
-Let’s think for yourself.
+[@836.24]
+Go figure.
 
-[@837.00]
-Can we transform this image into a code?
+[@837.88]
+Can we turn this into a code?
 
-[@840.00]
-Sure.
+[@841.29]
+Sure!
 
-[@842.00]
-If it’s Azure, it will have its own language.
+[@842.38]
+Azure has its own language for this.
 
-[@844.00]
-It’s BISEP, right?
+[@844.34]
+Bicep.
 
 [@846.00]
-But if we don’t want to stick with Cloud,
+But if we want something more
+cloud provider agnostic,
 
-[@848.00]
-We can use the tools of Terraform.
-
-[@851.00]
-The other one I’m using is Purumi.
+[@849.92]
+We can use Terraform or Pulumi.
 
 [@854.00]
-Purumi allows us to write everything we want.
+Pulumi allows us to express what we want
 
 [@860.00]
 By using TypeScript.
 
 [@862.00]
-I’m a developer in JavaScript.
+I’m a JavaScript developer
 
 [@864.00]
 So I use TypeScript.
 
 [@866.00]
-You don’t have to learn new syntax.
+So that I don’t have to learn new syntax.
 
 [@868.00]
 The second thing is TypeScript.
 
 [@870.00]
-It has a very good model training.
+Its trained model is very good.
 
 [@872.00]
-It’s GitHub Copilot.
+GitHub Copilot —
 
-[@874.00]
-GitHub Copilot has a lot of model training in TypeScript.
+[@875.16]
+GitHub Copilot has been trained
+on a lot of TypeScript.
 
 [@879.00]
-It makes everything we write, like we want a lock container.
+A lot of things you see here —
+
+[@882.83]
+Here I have a BlobContainer
 
 [@885.00]
-We want to key it out.
+I want a shared access key.
 
 [@887.00]
-It writes it for you.
+Copilot writes it for you.
 
 [@889.00]
 All of this,
@@ -821,47 +883,41 @@ All of this,
 [@891.00]
 GitHub Copilot writes it all.
 
-[@893.00]
-Okay.
-
 [@895.00]
-So we have the desired state.
+Ok, so we have the desired state.
 
 [@898.00]
-It’s Purumi.
+It’s this Pulumi TypeScript file.
 
 [@900.00]
 I push it up to GitHub.
 
 [@902.00]
-GitHub Action works.
+GitHub Action starts running.
 
 [@904.00]
-And GitHub Action orders Purumi up.
+And GitHub Action runs “pulumi up.”
 
 [@906.00]
-Purumi compares what we want.
+Pulumi starts comparing.
 
 [@910.00]
-This file.
+Desired state — this TypeScript file.
 
 [@912.00]
-What’s in it?
-
-[@914.00]
-Nothing.
+What’s in the actual system? Nothing.
 
 [@916.00]
-It has a plan.
+It devises a plan.
 
 [@918.00]
-What to create.
+The plan details what to create.
 
 [@920.00]
-And it will apply it to our Cloud.
+And it execute the plan against our Cloud.
 
 [@923.00]
-Let’s say I cut this part.
+Let’s say I remove this part.
 
 [@925.00]
 Cut it off.
@@ -873,10 +929,10 @@ And we push it up again.
 What happens?
 
 [@931.00]
-It knows that we wrote two things.
+It knows that we desire two things.
 
 [@934.00]
-But in the real system, there are three things.
+But in the real system, there are 3.
 
 [@936.00]
 We have to delete this.
@@ -885,28 +941,32 @@ We have to delete this.
 It will delete it.
 
 [@940.00]
-So for Cloud Infrastructure,
+So for cloud infrastructures,
 
 [@944.00]
-I suggest that you don’t write reconciliation engine.
+I suggest that you don’t write
+your own reconciliation engine.
 
 [@947.00]
 Because it’s very complex.
 
 [@949.00]
-Sometimes we have to create one before two, two before three.
+Sometimes we have to create one thing
+before creating the other thing.
 
 [@952.00]
-It’s a mess.
+It’s complicated.
 
-[@954.00]
-And the handle case is not enough.
+[@953.73]
+And just handling
+the creation is not enough
 
-[@956.00]
-We have to fix and delete the handle case.
+[@955.55]
+We must handle updating
+and deletion as well.
 
 [@958.00]
-It’s good to use the tools we have.
+It’s good to use off-the-shelf tools.
 
 [@960.00]
 Okay.
@@ -1263,16 +1323,16 @@ I created a repo called source.in.th.
 Like this.
 
 [@1242.00]
-But this time I didn’t use Purumi.
+But this time I didn’t use Pulumi.
 
 [@1244.00]
 I think my use case is very simple.
 
 [@1246.00]
-I don’t have to use Purumi.
+I don’t have to use Pulumi.
 
 [@1248.00]
-Because when I set Purumi.
+Because when I set Pulumi.
 
 [@1250.00]
 I have to set up a state.
