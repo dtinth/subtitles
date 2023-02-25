@@ -39,8 +39,22 @@ events.each do |event|
   end
 end
 
+# ChatGPT prompt: Write me a Ruby function convert_straight_quotes_to_smart_quotes
+def convert_straight_quotes_to_smart_quotes(text)
+  text = text.dup
+  # Single quotes
+  text.gsub!(/(\A|[^'])'([^']|$)/, '\1’\2')
+  text.gsub!(/'/, '’')
+
+  # Double quotes
+  text.gsub!(/(\A|[^"])\"([^\"]|$)/, '\1“\2')
+  text.gsub!(/"/, '”')
+
+  return text
+end
+
 by_time.sort.each do |t, text|
   puts "[@%.2f]" % [t]
-  puts text
+  puts convert_straight_quotes_to_smart_quotes((text || '-').strip)
   puts
 end
