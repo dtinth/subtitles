@@ -1,0 +1,2124 @@
+[@0.00]
+Hello, today I will talk about GitOps in Weird Places.
+
+[@6.00]
+I will introduce myself. My name is Thai. I am a software engineer at Eventpop.
+
+[@15.00]
+I am in the group called Creatorgarten.
+
+[@19.00]
+It is a group of people who are interested in learning, creating, and so on.
+
+[@24.00]
+We organize tech events for those who are interested and want it to happen.
+
+[@31.00]
+Most of these events are free events. You can follow us on the website of Creatorgarten and Facebook.
+
+[@37.00]
+When we organize events, we will have hackathon events.
+
+[@43.00]
+Sometimes there are codes related to almost everything we do.
+
+[@47.00]
+We will have them open source on GitHub so that others can learn.
+
+[@54.00]
+We have used GitOps a lot in the Creatorgarten organization.
+
+[@58.00]
+What is GitOps? Today I will tell you what it is and what you can do with it.
+
+[@66.00]
+Another name of GitOps is Operations by Proof of Requests.
+
+[@71.00]
+Before I explain, I will show you the demo.
+
+[@74.00]
+We have a Discord server called Bangkok Open Source Initiative.
+
+[@79.00]
+It is a community server for those who do open source.
+
+[@83.00]
+We also have Bangkok Open Source Hackathon.
+
+[@86.00]
+Actually, tomorrow there will be a second workshop.
+
+[@89.00]
+When we create a Discord server, there must be a channel for each button.
+
+[@104.00]
+I don’t know what to put in the button. I will write the first button first.
+
+[@108.00]
+Please read the button.
+
+[@110.00]
+The problem is that no one can fix my messages.
+
+[@119.00]
+Only the person who wrote the message can fix his own message.
+
+[@125.00]
+If any admin wants to change the button, he must ask me to fix it.
+
+[@130.00]
+Or he must delete my message and write a new message.
+
+[@133.00]
+Which is not convenient in both ways.
+
+[@135.00]
+This is a feature that many admin ask for the help of Discord.
+
+[@142.00]
+But 3 years have passed and we still don’t have this feature.
+
+[@146.00]
+But because we have a GitOps thinking style, I have a solution.
+
+[@151.00]
+This is the Discord server.
+
+[@154.00]
+This is the button that is in the server.
+
+[@157.00]
+You will see that it is not posted as a GitOps bot.
+
+[@160.00]
+At the bottom, there will be a link that says “Fix messages“.
+
+[@164.00]
+When you click this link, it will take you to GitHub.
+
+[@169.00]
+This is GitHub.
+
+[@171.00]
+There will be a file named “rules.txt“.
+
+[@174.00]
+You can go to the edit button.
+
+[@177.00]
+When you edit, you can add messages.
+
+[@179.00]
+For example, the day I put the word Sunday.
+
+[@183.00]
+Sunday, the 26th of the month.
+
+[@186.00]
+And click “Commit“.
+
+[@188.00]
+When you have finished the commit, what happens?
+
+[@191.00]
+GitHub Action will work.
+
+[@195.00]
+Go to Action.
+
+[@197.00]
+After that, the action will start working.
+
+[@200.00]
+I will skip to this page.
+
+[@202.00]
+And it will run the script.
+
+[@204.00]
+When the script is finished, the word Sunday will appear.
+
+[@208.00]
+Therefore, GitOps is like we use Git as a source of truth.
+
+[@217.00]
+This is probably more visible.
+
+[@220.00]
+But we haven’t given a good limit.
+
+[@223.00]
+What is GitOps?
+
+[@225.00]
+Let’s look at the history.
+
+[@227.00]
+It was created in 2017 by a company called Weaveworks.
+
+[@234.00]
+If you read the script, the history of GitOps.
+
+[@237.00]
+It will tell you that in 2016,
+
+[@241.00]
+An engineer tried to deploy a change to the system.
+
+[@246.00]
+He said that if it works, it’s okay.
+
+[@250.00]
+But if it doesn’t work, the system will be gone.
+
+[@252.00]
+He tried to deploy it.
+
+[@254.00]
+It broke down and the system was gone.
+
+[@256.00]
+But what’s really cool is that Weaveworks team
+
+[@261.00]
+said that they can restore the system to the same state in just 40 minutes.
+
+[@266.00]
+It’s something I didn’t think it would be this fast.
+
+[@270.00]
+Weaveworks team came to talk and took off the script.
+
+[@275.00]
+The CEO said that GitOps is a very strong word.
+
+[@285.00]
+So he took off the script and said what the principles are.
+
+[@288.00]
+It became a project called OpenGitOps.
+
+[@292.00]
+Let’s see what this project is about.
+
+[@296.00]
+It’s a principle for managing the system and software.
+
+[@305.00]
+Generally speaking, we use GitOps in the context of Kubernetes.
+
+[@311.00]
+Because it’s where GitOps comes from.
+
+[@314.00]
+The most famous tools in the world of Kubernetes are Flux, CD, Argo, CD.
+
+[@319.00]
+But I don’t use Kubernetes.
+
+[@322.00]
+Running Kubernetes and running it on the node is expensive.
+
+[@326.00]
+I usually use serverless.
+
+[@329.00]
+The good thing about serverless is that
+
+[@333.00]
+I like it a lot.
+
+[@337.00]
+I wrote about the logic app.
+
+[@340.00]
+I dropped a comma and the function crashed.
+
+[@345.00]
+When you put the wrong parameter and press deploy,
+
+[@349.00]
+The function will crash.
+
+[@352.00]
+The logic app can be used to create a shortcut.
+
+[@357.00]
+I’ll try it out.
+
+[@360.00]
+Thank you for coming to sell.
+
+[@363.00]
+I like serverless because I don’t need to scale much.
+
+[@370.00]
+If there is a server, it is expensive.
+
+[@373.00]
+Last month, I paid for Azure to pay 1 baht.
+
+[@377.00]
+It’s very expensive to use serverless.
+
+[@385.00]
+Let’s talk about GitOps.
+
+[@388.00]
+OpenGitOps has 4 principles.
+
+[@392.00]
+Let’s see what are the 4 principles.
+
+[@395.00]
+The first one is declarative.
+
+[@399.00]
+This rule says that the system that we will take care of with GitOps
+
+[@403.00]
+First, we have to explain what we want.
+
+[@408.00]
+It uses the word “desired state“.
+
+[@411.00]
+It’s like a description of the situation that we want our system to be.
+
+[@417.00]
+For example, the rules.txt file that keeps the rules in the channel.
+
+[@424.00]
+What should be the message?
+
+[@426.00]
+The second one is version and immutable.
+
+[@429.00]
+We have to save this file in the version control.
+
+[@434.00]
+This file is stored in the GitHub.
+
+[@437.00]
+The third one is push automatically.
+
+[@440.00]
+It says that there must be a software agent to pull the file automatically.
+
+[@449.00]
+This is the moment I push GitHub, GitHub Action automatically works.
+
+[@454.00]
+The last one is continuously reconciled.
+
+[@458.00]
+There must be a software agent to check the current state.
+
+[@465.00]
+And compare it with what we want.
+
+[@467.00]
+And make it consistent.
+
+[@469.00]
+And we have to make it consistent.
+
+[@473.00]
+These are the 4 principles.
+
+[@475.00]
+The fourth one is GitHub Action.
+
+[@477.00]
+The script that is running will update the message in the Discord.
+
+[@480.00]
+To match the one in Git.
+
+[@482.00]
+There are 2 main ways to implement GitOps.
+
+[@488.00]
+Push base and pull base.
+
+[@490.00]
+We can do both.
+
+[@492.00]
+Push base is that we have a system that is just like it.
+
+[@498.00]
+If we don’t do anything with this system, it will be like it.
+
+[@501.00]
+But what we do is we put the configs in the GitHub repo.
+
+[@507.00]
+And as soon as we push, there will be a CI process working.
+
+[@512.00]
+And do the make change task.
+
+[@515.00]
+Make the system change as we want.
+
+[@518.00]
+This means that our CI process must have a key that can go in and fix it.
+
+[@526.00]
+Or change the system.
+
+[@529.00]
+It means that our system must open the window for the CI to fix it.
+
+[@536.00]
+Some people think that it’s a risk of security.
+
+[@540.00]
+Especially if it’s Kubernetes.
+
+[@542.00]
+Some people hide the cluster behind the VPC.
+
+[@545.00]
+And the CI can’t connect to it.
+
+[@548.00]
+They say that people who use Kubernetes don’t like to push base.
+
+[@553.00]
+If we’re in the Kubernetes world, we’ll mostly use pull base.
+
+[@559.00]
+What is pull base?
+
+[@561.00]
+We put the GitOps operator in the system.
+
+[@566.00]
+And GitOps operator will pull the code from GitHub.
+
+[@569.00]
+And do the change of the system status.
+
+[@573.00]
+The good thing is that everything happens in the system.
+
+[@576.00]
+You don’t have to set up anything complicated.
+
+[@580.00]
+But it’s complicated when setting up Kubernetes.
+
+[@583.00]
+Everything happens in the system.
+
+[@586.00]
+The first example I showed you about Discord is push base.
+
+[@590.00]
+Let’s move this image out and see the high level.
+
+[@595.00]
+You can see that GitOps consists of 3 main parts.
+
+[@601.00]
+The leftmost part is Git that keeps the desired state.
+
+[@606.00]
+That we want our system to be in what condition.
+
+[@610.00]
+The right side is the real system that is running.
+
+[@613.00]
+And we have our own reconciliation system.
+
+[@617.00]
+We make the left and right sides the same.
+
+[@620.00]
+The main thing is to adjust the right side to what we want in the left.
+
+[@624.00]
+How can we make a reconciler this time?
+
+[@628.00]
+The answer is it depends.
+
+[@631.00]
+It depends on how you use it.
+
+[@633.00]
+If you use Kubernetes, you can go to Argo or Flux.
+
+[@636.00]
+As for other cases, we’ll see.
+
+[@638.00]
+First of all, the cloud infrastructure.
+
+[@641.00]
+Cloud infrastructure is AWS, Azure, Google Cloud.
+
+[@645.00]
+If we do manual operation, right?
+
+[@648.00]
+If we don’t have GitOps yet, how do we do manual operation?
+
+[@651.00]
+Go to the port and click on each one.
+
+[@654.00]
+Review, Create, Create,
+
+[@672.00]
+Assign to the group and attach to the group.
+
+[@676.00]
+Or create a service account, create a key, etc.
+
+[@680.00]
+If we do many of these, this is an easy example.
+
+[@686.00]
+If we do many of these, it’s very easy.
+
+[@688.00]
+I don’t have many examples.
+
+[@690.00]
+I don’t have an advanced system.
+
+[@692.00]
+So I stole the slide first.
+
+[@694.00]
+Thank you, Khun Pong, for letting me steal the slide.
+
+[@702.00]
+There are many customers, right?
+
+[@705.00]
+You have to take care of the system a lot.
+
+[@707.00]
+If we have a lot of systems, one way to fix it is to do scripts and do automation.
+
+[@715.00]
+For example, I use Azure CLI to create resources.
+
+[@720.00]
+As I showed you earlier.
+
+[@722.00]
+The problem is that this script can only be created.
+
+[@725.00]
+If you want to delete it, you have to write another script.
+
+[@727.00]
+And if I create and there’s something wrong, what should I do?
+
+[@731.00]
+I might have to delete it.
+
+[@733.00]
+I might have to run the script and then run the script to create.
+
+[@735.00]
+And sometimes if we run the creation command and it dies in the middle of the way,
+
+[@739.00]
+When we run it again, we can’t run it again because the object is created in the middle.
+
+[@745.00]
+We have to delete it and then create a new one.
+
+[@747.00]
+This is a problem of running scripts.
+
+[@750.00]
+But as far as I’ve tested, this script doesn’t have any problems.
+
+[@755.00]
+Because Azure has designed that if we create what we have and all the parameters are the same, it will be considered successful.
+
+[@762.00]
+Now let’s see what GitOps is.
+
+[@766.00]
+If we use GitOps, back to the first principle.
+
+[@772.00]
+We have to be able to explain our system in a declarative way.
+
+[@777.00]
+I don’t know how to translate it to be declarative.
+
+[@781.00]
+Can anyone translate it for me?
+
+[@783.00]
+What is declarative in Thai?
+
+[@785.00]
+It’s pronounced.
+
+[@787.00]
+The opposite word is imperative.
+
+[@791.00]
+It’s like a command.
+
+[@793.00]
+Thank you very much.
+
+[@795.00]
+Because in the slides, I didn’t prepare at all.
+
+[@798.00]
+How to translate it into Thai.
+
+[@800.00]
+But I’ll give you an example.
+
+[@802.00]
+If imperative, we tell you what to do, right?
+
+[@807.00]
+It’s like a step.
+
+[@809.00]
+Create this, create that, create this.
+
+[@811.00]
+Imperative is telling you what to do.
+
+[@814.00]
+Or script is imperative too.
+
+[@817.00]
+If you look at it from a different perspective, declarative.
+
+[@821.00]
+We don’t tell you how to do it.
+
+[@823.00]
+We just tell you what we want.
+
+[@825.00]
+We want a resource group with a lock analytic workspace that is linked to this resource group.
+
+[@829.00]
+This is what we want.
+
+[@833.00]
+How do we set it?
+
+[@835.00]
+Let’s think for yourself.
+
+[@837.00]
+Can we transform this image into a code?
+
+[@840.00]
+Sure.
+
+[@842.00]
+If it’s Azure, it will have its own language.
+
+[@844.00]
+It’s BISEP, right?
+
+[@846.00]
+But if we don’t want to stick with Cloud,
+
+[@848.00]
+We can use the tools of Terraform.
+
+[@851.00]
+The other one I’m using is Purumi.
+
+[@854.00]
+Purumi allows us to write everything we want.
+
+[@860.00]
+By using TypeScript.
+
+[@862.00]
+I’m a developer in JavaScript.
+
+[@864.00]
+So I use TypeScript.
+
+[@866.00]
+You don’t have to learn new syntax.
+
+[@868.00]
+The second thing is TypeScript.
+
+[@870.00]
+It has a very good model training.
+
+[@872.00]
+It’s GitHub Copilot.
+
+[@874.00]
+GitHub Copilot has a lot of model training in TypeScript.
+
+[@879.00]
+It makes everything we write, like we want a lock container.
+
+[@885.00]
+We want to key it out.
+
+[@887.00]
+It writes it for you.
+
+[@889.00]
+All of this,
+
+[@891.00]
+GitHub Copilot writes it all.
+
+[@893.00]
+Okay.
+
+[@895.00]
+So we have the desired state.
+
+[@898.00]
+It’s Purumi.
+
+[@900.00]
+I push it up to GitHub.
+
+[@902.00]
+GitHub Action works.
+
+[@904.00]
+And GitHub Action orders Purumi up.
+
+[@906.00]
+Purumi compares what we want.
+
+[@910.00]
+This file.
+
+[@912.00]
+What’s in it?
+
+[@914.00]
+Nothing.
+
+[@916.00]
+It has a plan.
+
+[@918.00]
+What to create.
+
+[@920.00]
+And it will apply it to our Cloud.
+
+[@923.00]
+Let’s say I cut this part.
+
+[@925.00]
+Cut it off.
+
+[@927.00]
+And we push it up again.
+
+[@929.00]
+What happens?
+
+[@931.00]
+It knows that we wrote two things.
+
+[@934.00]
+But in the real system, there are three things.
+
+[@936.00]
+We have to delete this.
+
+[@938.00]
+It will delete it.
+
+[@940.00]
+So for Cloud Infrastructure,
+
+[@944.00]
+I suggest that you don’t write reconciliation engine.
+
+[@947.00]
+Because it’s very complex.
+
+[@949.00]
+Sometimes we have to create one before two, two before three.
+
+[@952.00]
+It’s a mess.
+
+[@954.00]
+And the handle case is not enough.
+
+[@956.00]
+We have to fix and delete the handle case.
+
+[@958.00]
+It’s good to use the tools we have.
+
+[@960.00]
+Okay.
+
+[@962.00]
+We have already created the Cloud Infrastructure.
+
+[@965.00]
+What else can we create?
+
+[@967.00]
+We can use GitOps with GitHub.
+
+[@972.00]
+If I’m in an organization and I’m not an admin.
+
+[@977.00]
+When I want to have a team or a repo.
+
+[@980.00]
+I have to ask the admin to help me create this team.
+
+[@983.00]
+And we create a repository.
+
+[@985.00]
+Add 7 people and write access.
+
+[@989.00]
+The admin will invite 7 people.
+
+[@993.00]
+Follow the steps.
+
+[@995.00]
+And then come back and say okay.
+
+[@998.00]
+It turns out that there are 8 people.
+
+[@1000.00]
+I have to go back to the same loop.
+
+[@1002.00]
+But in this case,
+
+[@1004.00]
+We have a GitHub provider.
+
+[@1007.00]
+And when it’s a TypeScript,
+
+[@1010.00]
+We can use a code that’s long.
+
+[@1012.00]
+Extract it into a function.
+
+[@1014.00]
+I can write code like this.
+
+[@1017.00]
+This is the real code.
+
+[@1019.00]
+In the repository.
+
+[@1021.00]
+In the organization of Creator’s Garden.
+
+[@1023.00]
+You will see that it’s just one button.
+
+[@1026.00]
+To add people.
+
+[@1028.00]
+And when it’s a pattern like this.
+
+[@1030.00]
+Anyone who wants to join the project.
+
+[@1032.00]
+You can send a pull request.
+
+[@1034.00]
+It’s an operation by pull request.
+
+[@1036.00]
+The function like function team.
+
+[@1038.00]
+Function write access.
+
+[@1040.00]
+We’ll write it to call the pull.
+
+[@1044.00]
+When I push GitHub,
+
+[@1050.00]
+I get a team.
+
+[@1052.00]
+We have a GitHub team.
+
+[@1054.00]
+And you can push the code.
+
+[@1057.00]
+In the group of Creator’s Garden.
+
+[@1059.00]
+We are a group that is quite open.
+
+[@1062.00]
+We tell everyone that.
+
+[@1064.00]
+If anyone has ever come to the event of Creator’s Garden.
+
+[@1066.00]
+You can join the club.
+
+[@1069.00]
+By sending a pull request to this file.
+
+[@1071.00]
+And then put your own GitHub name in.
+
+[@1074.00]
+Which this file has only this list.
+
+[@1077.00]
+If anyone wants to apply.
+
+[@1079.00]
+They know what to do.
+
+[@1081.00]
+Open pull request and add a button.
+
+[@1083.00]
+Send the information like this.
+
+[@1085.00]
+Send PR.
+
+[@1087.00]
+When we accept.
+
+[@1089.00]
+The system of pull me.
+
+[@1091.00]
+Send invite to you.
+
+[@1093.00]
+Now our group has 41 people.
+
+[@1095.00]
+And then we become an organization.
+
+[@1098.00]
+Which has active users on GitHub.
+
+[@1101.00]
+Is the number one in Thailand.
+
+[@1103.00]
+Besides this.
+
+[@1108.00]
+The second principle of GitOps.
+
+[@1112.00]
+We have to put our design state.
+
+[@1116.00]
+In the place where it is version control.
+
+[@1118.00]
+So we can see.
+
+[@1120.00]
+What’s going on in our organization.
+
+[@1122.00]
+What is this?
+
+[@1124.00]
+I invited Nong Pup to join the organization.
+
+[@1131.00]
+But Nong Pup answered the invitation.
+
+[@1134.00]
+Not in time in 7 days.
+
+[@1136.00]
+So I have to do something.
+
+[@1138.00]
+I have to kick him out of the organization.
+
+[@1140.00]
+To invite him back.
+
+[@1142.00]
+Like this.
+
+[@1144.00]
+This is the second example.
+
+[@1146.00]
+The third example.
+
+[@1148.00]
+Can we use GitOps with the website?
+
+[@1150.00]
+If anyone has ever used GitHub page.
+
+[@1152.00]
+You may be familiar with it.
+
+[@1154.00]
+Because we push GitHub page.
+
+[@1156.00]
+For a while.
+
+[@1158.00]
+It will be deployed as a web.
+
+[@1160.00]
+I tried to see.
+
+[@1162.00]
+I feel that GitHub page.
+
+[@1164.00]
+It’s all four of GitOps.
+
+[@1166.00]
+It helps developers.
+
+[@1168.00]
+To do GitOps since 2008.
+
+[@1170.00]
+That is 9 years ago.
+
+[@1172.00]
+When the word GitOps was born.
+
+[@1174.00]
+Or if we use NetRefine.
+
+[@1176.00]
+Sometimes we have a domain.
+
+[@1178.00]
+And we want to do URL Redirection.
+
+[@1180.00]
+Normally we have to use Bidly.
+
+[@1182.00]
+Or something like this.
+
+[@1184.00]
+We have to pay.
+
+[@1186.00]
+Or Firebase Dynamic Link.
+
+[@1188.00]
+So we have to invite him.
+
+[@1190.00]
+To take care of it alone.
+
+[@1192.00]
+But we can use the redirect file.
+
+[@1194.00]
+On the Git.
+
+[@1196.00]
+So we can define.
+
+[@1198.00]
+Which URL to redirect to.
+
+[@1200.00]
+This is using NetRefine.
+
+[@1202.00]
+Next.
+
+[@1204.00]
+Domain name.
+
+[@1206.00]
+Can domain name take care of it?
+
+[@1208.00]
+With GitOps.
+
+[@1210.00]
+This is a real chat example.
+
+[@1212.00]
+I talked to Phum.
+
+[@1214.00]
+Because Phum is the one who holds the domain.
+
+[@1216.00]
+I want to add a CNAME.
+
+[@1218.00]
+But I don’t have admin access.
+
+[@1220.00]
+I have to send an access like this.
+
+[@1222.00]
+Okay.
+
+[@1226.00]
+There is another domain that I wrote.
+
+[@1228.00]
+Source.in.th
+
+[@1230.00]
+I think.
+
+[@1232.00]
+I want this domain to be easy to take care of.
+
+[@1234.00]
+So I use GitOps.
+
+[@1236.00]
+What I did is.
+
+[@1238.00]
+I created a repo called source.in.th.
+
+[@1240.00]
+Like this.
+
+[@1242.00]
+But this time I didn’t use Purumi.
+
+[@1244.00]
+I think my use case is very simple.
+
+[@1246.00]
+I don’t have to use Purumi.
+
+[@1248.00]
+Because when I set Purumi.
+
+[@1250.00]
+I have to set up a state.
+
+[@1252.00]
+I have to set up an account.
+
+[@1254.00]
+But Cloudflare.
+
+[@1256.00]
+There is an API that is very easy to use.
+
+[@1258.00]
+Create API key and shoot.
+
+[@1260.00]
+And then.
+
+[@1262.00]
+DNS record.
+
+[@1264.00]
+Because it depends on each other.
+
+[@1266.00]
+So when creating and deleting.
+
+[@1268.00]
+It’s not difficult.
+
+[@1270.00]
+I created a GitHub workflow.
+
+[@1272.00]
+When I push it, I let it run.
+
+[@1274.00]
+The name of the command is update.mjs.
+
+[@1276.00]
+This file update.mjs.
+
+[@1278.00]
+The topmost.
+
+[@1280.00]
+It will be.
+
+[@1282.00]
+DNS record that we want to have.
+
+[@1284.00]
+And below.
+
+[@1286.00]
+It’s a script that contains everything.
+
+[@1288.00]
+I’m going to check.
+
+[@1290.00]
+What records are there?
+
+[@1292.00]
+What do I have to add?
+
+[@1294.00]
+The bottom is.
+
+[@1296.00]
+The task that it occurs.
+
+[@1298.00]
+Order to run.
+
+[@1300.00]
+Actually, there is a code below.
+
+[@1302.00]
+It’s a code that calls Cloudflare API.
+
+[@1304.00]
+Just shoot.
+
+[@1306.00]
+No need to use any dependencies.
+
+[@1308.00]
+You can use the node.js.
+
+[@1310.00]
+When we have.
+
+[@1312.00]
+DNS record written in GitHub.
+
+[@1314.00]
+Like this.
+
+[@1316.00]
+It makes it possible for someone to send.
+
+[@1318.00]
+Puriquests.
+
+[@1320.00]
+Nong Liffy.
+
+[@1322.00]
+Send Puriquests.
+
+[@1324.00]
+Create subdomain.
+
+[@1326.00]
+Lam.source.in.th
+
+[@1328.00]
+I tried to press it.
+
+[@1330.00]
+When I pressed it, I found Hell Kitchen.
+
+[@1332.00]
+And asked.
+
+[@1334.00]
+Where’s the lam source?
+
+[@1336.00]
+You will see that.
+
+[@1338.00]
+GitOps.
+
+[@1340.00]
+It makes everyone contribute.
+
+[@1342.00]
+Even if you’re not in.
+
+[@1344.00]
+Even if you’re not an admin.
+
+[@1346.00]
+You can open Puriquests.
+
+[@1348.00]
+You can participate in the project.
+
+[@1350.00]
+Work.
+
+[@1352.00]
+I wrote this.
+
+[@1354.00]
+I’ll give you an example.
+
+[@1356.00]
+How to write a reconciler.
+
+[@1358.00]
+First, load.
+
+[@1360.00]
+What do we want it to look like?
+
+[@1362.00]
+Two, it’s a query.
+
+[@1364.00]
+What is the current look like?
+
+[@1366.00]
+Three, let’s compare.
+
+[@1368.00]
+Here, let’s compare like this.
+
+[@1370.00]
+When compared, we will know.
+
+[@1372.00]
+What to create, what to delete, what to fix.
+
+[@1374.00]
+And we’ll apply it to the real system.
+
+[@1376.00]
+It will be like this.
+
+[@1378.00]
+Example 5.
+
+[@1382.00]
+Discord server.
+
+[@1384.00]
+This is the demo at the beginning.
+
+[@1386.00]
+I’ll show you how I created it.
+
+[@1388.00]
+I wrote the script myself.
+
+[@1390.00]
+In the channel, we can create what we call webhooks.
+
+[@1392.00]
+When creating webhooks.
+
+[@1394.00]
+Webhooks will connect to the channel.
+
+[@1396.00]
+We will have a URL.
+
+[@1398.00]
+We can use this URL to shoot HTTP.
+
+[@1400.00]
+Post content.
+
+[@1402.00]
+When sending content, the bot will post.
+
+[@1404.00]
+This time, it will return the ID value.
+
+[@1406.00]
+We can use this ID to shoot HTTP.
+
+[@1408.00]
+It will be used to fix the message.
+
+[@1410.00]
+It’s easy.
+
+[@1412.00]
+I wrote the script.
+
+[@1414.00]
+This is script 34.
+
+[@1416.00]
+It reads the file root and text.
+
+[@1418.00]
+We’ll split it.
+
+[@1420.00]
+Split it into a few messages.
+
+[@1422.00]
+And shoot the patch.
+
+[@1424.00]
+Put the ID in.
+
+[@1426.00]
+Something like this.
+
+[@1428.00]
+It’s convenient.
+
+[@1430.00]
+It’s convenient.
+
+[@1432.00]
+It’s convenient.
+
+[@1434.00]
+This time, the script I wrote is simpler than the previous one.
+
+[@1442.00]
+Because it just loads what we want it to be.
+
+[@1444.00]
+And write what we want.
+
+[@1446.00]
+No need to check the original.
+
+[@1448.00]
+How it looks like.
+
+[@1450.00]
+You can replace it like this.
+
+[@1452.00]
+This time, when I did it.
+
+[@1456.00]
+I wrote something.
+
+[@1458.00]
+It’s easy.
+
+[@1460.00]
+I wrote a message.
+
+[@1462.00]
+Someone contributed.
+
+[@1464.00]
+I don’t know how to manage Discord server.
+
+[@1466.00]
+I don’t know what to add.
+
+[@1468.00]
+Someone contributed.
+
+[@1470.00]
+They added a button.
+
+[@1472.00]
+As a server member.
+
+[@1474.00]
+No need to be an admin.
+
+[@1476.00]
+You can help write the button for our server.
+
+[@1478.00]
+I have to thank Khun Khanyanit J.
+
+[@1482.00]
+If you use Terraform.
+
+[@1488.00]
+There’s a Discord provider.
+
+[@1490.00]
+If you don’t want to fix only messages.
+
+[@1492.00]
+You can create and manage
+
+[@1494.00]
+the low channel categories.
+
+[@1496.00]
+Through Terraform.
+
+[@1498.00]
+If you want to find it, you can do it.
+
+[@1500.00]
+The last example.
+
+[@1504.00]
+YouTube channel.
+
+[@1506.00]
+Can we take care of it?
+
+[@1508.00]
+This one.
+
+[@1510.00]
+This is Creator’s Garden channel.
+
+[@1512.00]
+We set up take-meet-ups.
+
+[@1514.00]
+And take-meet-ups.
+
+[@1516.00]
+When someone presents.
+
+[@1518.00]
+After we go live.
+
+[@1520.00]
+We cut the clips.
+
+[@1522.00]
+And upload to YouTube channel.
+
+[@1524.00]
+There are only 150 subscribers.
+
+[@1526.00]
+It’s a new channel.
+
+[@1528.00]
+You can subscribe first.
+
+[@1530.00]
+Now.
+
+[@1532.00]
+Each video.
+
+[@1534.00]
+I want it to have a description.
+
+[@1536.00]
+In a similar format.
+
+[@1538.00]
+This is the description.
+
+[@1540.00]
+If you have to write it yourself.
+
+[@1542.00]
+It’s exhausting.
+
+[@1544.00]
+If you want to automate it.
+
+[@1546.00]
+It’s not just this.
+
+[@1548.00]
+Talk, description, timestamp.
+
+[@1550.00]
+If you want the logo clip to be inter.
+
+[@1552.00]
+You have to have an English description.
+
+[@1554.00]
+Localization.
+
+[@1556.00]
+If you use YouTube.
+
+[@1558.00]
+English version.
+
+[@1560.00]
+You will get an English description.
+
+[@1562.00]
+Some talks.
+
+[@1566.00]
+If the owner of the talk has time.
+
+[@1568.00]
+Put the English subtitle.
+
+[@1570.00]
+You can upload the subtitle.
+
+[@1572.00]
+And.
+
+[@1574.00]
+Besides this.
+
+[@1576.00]
+Talk’s name.
+
+[@1578.00]
+If we use the name of the talk to be the clip name.
+
+[@1580.00]
+It’s not clickable.
+
+[@1582.00]
+We have to make it possible.
+
+[@1584.00]
+Customize the clip’s name.
+
+[@1586.00]
+And put it in English.
+
+[@1588.00]
+Finally.
+
+[@1590.00]
+Thumbnail.
+
+[@1592.00]
+All of these.
+
+[@1594.00]
+You can fix it all.
+
+[@1596.00]
+There are many speakers in our group.
+
+[@1598.00]
+But not all speakers.
+
+[@1600.00]
+We have to make it accessible.
+
+[@1602.00]
+So we think.
+
+[@1604.00]
+We can make anyone contribute.
+
+[@1606.00]
+Like I said.
+
+[@1608.00]
+Everything is on GitHub.
+
+[@1610.00]
+It’s a report called
+
+[@1612.00]
+Creator’s Garden / Videos.
+
+[@1614.00]
+In each folder.
+
+[@1616.00]
+There will be talks.
+
+[@1618.00]
+There will be file.md that stores metadata.
+
+[@1620.00]
+It’s a yaml like this.
+
+[@1622.00]
+And.
+
+[@1624.00]
+The top is a jpeg file.
+
+[@1626.00]
+It’s a thumbnail of the clip.
+
+[@1628.00]
+And the bottom is a subtitle file.
+
+[@1630.00]
+When I made the pipeline.
+
+[@1634.00]
+There was a problem.
+
+[@1636.00]
+YouTube API.
+
+[@1638.00]
+There’s a quota to shoot API.
+
+[@1640.00]
+If we shoot a lot of API.
+
+[@1642.00]
+The quota is full.
+
+[@1644.00]
+Another thing.
+
+[@1646.00]
+There’s no YouTube provider.
+
+[@1648.00]
+Which is.
+
+[@1650.00]
+It’s understandable.
+
+[@1652.00]
+Why there’s no.
+
+[@1654.00]
+So I have to write.
+
+[@1656.00]
+I have to write a compiler.
+
+[@1658.00]
+The technique is.
+
+[@1660.00]
+I created what is called a local database.
+
+[@1662.00]
+The same principle.
+
+[@1664.00]
+But instead of checking.
+
+[@1666.00]
+By curing YouTube API.
+
+[@1668.00]
+We curate the database.
+
+[@1670.00]
+Which is our local.
+
+[@1672.00]
+So.
+
+[@1674.00]
+The first and second.
+
+[@1676.00]
+Just curate the local database.
+
+[@1678.00]
+And we’ll get the same change.
+
+[@1680.00]
+And we’ll apply it to the real system.
+
+[@1682.00]
+And when it’s applied to the real system.
+
+[@1684.00]
+We can update our local database.
+
+[@1686.00]
+This time.
+
+[@1688.00]
+Where do you keep the local database?
+
+[@1690.00]
+I keep it in the grid.
+
+[@1692.00]
+There’s a file called YouTube Sync.yml.
+
+[@1694.00]
+It will keep all the states.
+
+[@1696.00]
+For example.
+
+[@1698.00]
+When there’s an update of the thumbnail file.
+
+[@1700.00]
+I’ll keep the hash.
+
+[@1702.00]
+In the future.
+
+[@1704.00]
+If the file changes.
+
+[@1706.00]
+We can compare the hash with the state.
+
+[@1708.00]
+We’ll get it.
+
+[@1710.00]
+If it doesn’t change.
+
+[@1712.00]
+The subtitle is the same.
+
+[@1714.00]
+Including metadata.
+
+[@1716.00]
+Make it possible to compare.
+
+[@1718.00]
+Compare the content on the channel.
+
+[@1720.00]
+And what we want it to be.
+
+[@1722.00]
+Without having to shoot YouTube API.
+
+[@1724.00]
+Finally, when we upload the caption.
+
+[@1726.00]
+On YouTube API.
+
+[@1728.00]
+It will give you the ID back.
+
+[@1730.00]
+If you go back to the previous slide.
+
+[@1732.00]
+You’ll see that.
+
+[@1734.00]
+Just listing.
+
+[@1736.00]
+What video has caption.
+
+[@1738.00]
+It’s been 50 points.
+
+[@1740.00]
+I have to keep the ID.
+
+[@1742.00]
+In the local state.
+
+[@1744.00]
+When we update the caption.
+
+[@1746.00]
+We can update it.
+
+[@1748.00]
+Without having to go to the Qly API.
+
+[@1750.00]
+What does it mean?
+
+[@1752.00]
+When I publish the video.
+
+[@1754.00]
+When I publish the video.
+
+[@1756.00]
+I just fix the false and true here.
+
+[@1758.00]
+When the action is done.
+
+[@1760.00]
+It will update the database.
+
+[@1762.00]
+From the privacy that is unlisted.
+
+[@1764.00]
+To public.
+
+[@1766.00]
+I’ll show you.
+
+[@1768.00]
+It will be like this.
+
+[@1770.00]
+This time.
+
+[@1772.00]
+When we have a new video.
+
+[@1774.00]
+What do we do?
+
+[@1776.00]
+I uploaded the video on YouTube.
+
+[@1778.00]
+But I didn’t put any description.
+
+[@1780.00]
+No data.
+
+[@1782.00]
+Then I copied the URL.
+
+[@1784.00]
+When I copied the URL.
+
+[@1786.00]
+I ordered the script.
+
+[@1788.00]
+To import.
+
+[@1790.00]
+Put the URL in.
+
+[@1792.00]
+Put the name.
+
+[@1794.00]
+Information about which event.
+
+[@1796.00]
+Then it will generate this file.
+
+[@1800.00]
+These JPEG files.
+
+[@1802.00]
+It’s a thumbnail that YouTube generates.
+
+[@1804.00]
+Import it.
+
+[@1806.00]
+Then.
+
+[@1808.00]
+There will be a template file.
+
+[@1810.00]
+I’ll put the information in.
+
+[@1812.00]
+Like this.
+
+[@1814.00]
+Then I run the sync command.
+
+[@1816.00]
+The sync command.
+
+[@1818.00]
+It will preview.
+
+[@1820.00]
+From the information in the KIT.
+
+[@1822.00]
+Now.
+
+[@1824.00]
+What changes will happen to our channel?
+
+[@1826.00]
+It will say.
+
+[@1828.00]
+We have to update.
+
+[@1830.00]
+We have to update.
+
+[@1832.00]
+The description of this video.
+
+[@1834.00]
+The status is unlisted.
+
+[@1836.00]
+Because it’s not public yet.
+
+[@1838.00]
+Because the database.
+
+[@1840.00]
+The local database is in the same report.
+
+[@1842.00]
+We can run this command.
+
+[@1844.00]
+Even if we don’t have access.
+
+[@1846.00]
+To the YouTube API.
+
+[@1848.00]
+It can preview everything.
+
+[@1850.00]
+Then we take the same step.
+
+[@1852.00]
+The same step.
+
+[@1854.00]
+KIT.
+
+[@1856.00]
+When KIT HUB action works.
+
+[@1858.00]
+When you press refresh.
+
+[@1860.00]
+It will be like this.
+
+[@1862.00]
+Description of everything.
+
+[@1864.00]
+Or the original thumbnail.
+
+[@1866.00]
+We will crop a frame.
+
+[@1868.00]
+And put it in.
+
+[@1870.00]
+Done.
+
+[@1872.00]
+Then it will.
+
+[@1874.00]
+Write the status file.
+
+[@1876.00]
+Write in KIT HUB.
+
+[@1878.00]
+It will upload tomorrow.
+
+[@1880.00]
+It will update tomorrow.
+
+[@1882.00]
+So.
+
+[@1884.00]
+About opening a YouTube channel.
+
+[@1886.00]
+I don’t have much experience.
+
+[@1888.00]
+And.
+
+[@1890.00]
+But I know.
+
+[@1892.00]
+There are people who can take care of the YouTube channel.
+
+[@1894.00]
+There are people who know better than me.
+
+[@1896.00]
+Those people should have the power.
+
+[@1902.00]
+In taking care of our YouTube.
+
+[@1906.00]
+Using KIT OPS.
+
+[@1908.00]
+I think it’s a good way.
+
+[@1912.00]
+To empower.
+
+[@1914.00]
+To empower people in the community.
+
+[@1916.00]
+To create things together.
+
+[@1918.00]
+So.
+
+[@1920.00]
+When I think of KIT OPS.
+
+[@1924.00]
+I look at the system.
+
+[@1926.00]
+I see KIT OPS.
+
+[@1928.00]
+I may ask.
+
+[@1930.00]
+What else can we do with KIT OPS?
+
+[@1932.00]
+It’s over.
+
+[@1934.00]
+Thank you very much.
+
+[@1936.00]
+[Applause]
+
+[@1938.00]
+-
+
