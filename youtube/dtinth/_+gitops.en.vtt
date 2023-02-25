@@ -1,131 +1,186 @@
 [@0.00]
-Hello, today I will talk about GitOps in Weird Places.
+Hello! Today I will talk about…
 
-[@6.00]
-I will introduce myself. My name is Thai. I am a software engineer at Eventpop.
+[@3.75]
+GitOps in Weird Places.
+
+[@10.06]
+I will introduce myself. My name is Thai.
+
+[@12.00]
+I am a software engineer at Eventpop.
 
 [@15.00]
 I am in the group called Creatorgarten.
 
 [@19.00]
-It is a group of people who are interested in learning, creating, and so on.
+It is a group of people who are interested
+in learning, creating, and so on.
 
 [@24.00]
-We organize tech events for those who are interested and want it to happen.
+We organize tech events about things we’re
+interested in and want to see happen.
 
 [@31.00]
-Most of these events are free events. You can follow us on the website of Creatorgarten and Facebook.
+Most of these events are free events.
+
+[@33.22]
+You can follow us on Creatorgarten’s
+website and Facebook Page.
 
 [@37.00]
-When we organize events, we will have hackathon events.
+When we organize events —
+
+[@40.48]
+Sometimes we run hackathon events.
 
 [@43.00]
-Sometimes there are codes related to almost everything we do.
+Sometimes there are codes involved.
 
 [@47.00]
-We will have them open source on GitHub so that others can learn.
+Almost all of them are
+open source on GitHub
+
+[@49.25]
+So it can be used as a references
+and others can learn from it.
 
 [@54.00]
-We have used GitOps a lot in the Creatorgarten organization.
+We have used GitOps a lot
+in the Creatorgarten organization.
 
 [@58.00]
-What is GitOps? Today I will tell you what it is and what you can do with it.
+What is GitOps?
 
-[@66.00]
-Another name of GitOps is Operations by Proof of Requests.
+[@60.38]
+Today I will tell you what it is
+
+[@64.96]
+and what you can do with it.
+
+[@67.26]
+Another name of GitOps is
+“Operations by Pull Request.”
 
 [@71.00]
-Before I explain, I will show you the demo.
+Before I explain,
+I will show you the demo.
 
 [@74.00]
-We have a Discord server called Bangkok Open Source Initiative.
+We have a Discord server called
+Bangkok Open Source Initiative.
 
 [@79.00]
-It is a community server for those who do open source.
+It is a community server
+for those who do open source.
 
 [@83.00]
-We also have Bangkok Open Source Hackathon.
+We’re also running the
+Bangkok Open Source Hackathon event.
 
 [@86.00]
-Actually, tomorrow there will be a second workshop.
+Actually, tomorrow there
+will be a second workshop.
 
-[@89.00]
-When we create a Discord server, there must be a channel for each button.
+[@89.73]
+-
+
+[@93.51]
+When we create a community Discord server,
+
+[@98.61]
+There must be a #rules channel.
 
 [@104.00]
-I don’t know what to put in the button. I will write the first button first.
+I don’t know what to put in,
+
+[@106.33]
+So I wrote the first rule of the server:
 
 [@108.00]
-Please read the button.
+“Please read the rules.”
 
-[@110.00]
-The problem is that no one can fix my messages.
+[@110.05]
+-
+
+[@112.73]
+The problem is that no one
+can edit my messages.
 
 [@119.00]
-Only the person who wrote the message can fix his own message.
+Only the person who wrote the message
+can edit their own messages.
 
 [@125.00]
-If any admin wants to change the button, he must ask me to fix it.
+If any admin wants to change the rules,
+they must ask me to fix it.
 
 [@130.00]
-Or he must delete my message and write a new message.
+Or they must delete my message
+and write a new one.
 
 [@133.00]
-Which is not convenient in both ways.
+Neither way is convenient.
 
 [@135.00]
-This is a feature that many admin ask for the help of Discord.
+This is a feature that many admins
+are asking for from Discord.
 
 [@142.00]
-But 3 years have passed and we still don’t have this feature.
+But 3 years have passed
+and we still don’t have this feature.
 
 [@146.00]
-But because we have a GitOps thinking style, I have a solution.
+But with a GitOps mindset,
+I have a solution.
 
 [@151.00]
 This is the Discord server.
 
 [@154.00]
-This is the button that is in the server.
+This is the server rules.
 
 [@157.00]
-You will see that it is not posted as a GitOps bot.
+You will see that it is not posted by
+a human. This is the GitOps bot.
 
 [@160.00]
-At the bottom, there will be a link that says “Fix messages“.
+At the bottom, there will be a link
+that says “Edit this text.”
 
 [@164.00]
-When you click this link, it will take you to GitHub.
+When you click this link,
+it will take you to GitHub.
 
 [@169.00]
 This is GitHub.
 
 [@171.00]
-There will be a file named “rules.txt“.
+There will be a file named “rules.txt.”
 
 [@174.00]
 You can go to the edit button.
 
 [@177.00]
-When you edit, you can add messages.
+You can change the text.
 
 [@179.00]
-For example, the day I put the word Sunday.
+For example, I put in the word Sunday.
 
 [@183.00]
-Sunday, the 26th of the month.
+Sunday, February 26th.
 
 [@186.00]
-And click “Commit“.
+And click “Commit.”
 
 [@188.00]
-When you have finished the commit, what happens?
+When committed, what happens?
 
 [@191.00]
-GitHub Action will work.
+GitHub Action will trigger.
 
 [@195.00]
-Go to Action.
+Go to Actions.
 
 [@197.00]
 After that, the action will start working.
@@ -137,16 +192,21 @@ I will skip to this page.
 And it will run the script.
 
 [@204.00]
-When the script is finished, the word Sunday will appear.
+When the script is finished,
+the word “Sunday” will appear.
 
-[@208.00]
-Therefore, GitOps is like we use Git as a source of truth.
+[@209.80]
+-
+
+[@211.81]
+Therefore, GitOps is like
+using Git as a source of truth.
 
 [@217.00]
-This is probably more visible.
+Hope you get a better picture.
 
 [@220.00]
-But we haven’t given a good limit.
+But we haven’t really defined it.
 
 [@223.00]
 What is GitOps?
@@ -155,112 +215,147 @@ What is GitOps?
 Let’s look at the history.
 
 [@227.00]
-It was created in 2017 by a company called Weaveworks.
+It was created in 2017
+
+[@231.86]
+By a company called Weaveworks.
 
 [@234.00]
-If you read the script, the history of GitOps.
+If you read the article
+“The history of GitOps”
 
 [@237.00]
 It will tell you that in 2016,
 
 [@241.00]
-An engineer tried to deploy a change to the system.
+An engineer tried to deploy
+a change to the system.
 
-[@246.00]
-He said that if it works, it’s okay.
+[@247.75]
+If it works, it’s okay.
 
-[@250.00]
-But if it doesn’t work, the system will be gone.
-
-[@252.00]
-He tried to deploy it.
+[@249.97]
+But if it doesn’t work, it
+“could wipe out the entire system.”
 
 [@254.00]
-It broke down and the system was gone.
+Well, “the system was wiped out.”
 
 [@256.00]
-But what’s really cool is that Weaveworks team
+But something really cool happened.
 
 [@261.00]
-said that they can restore the system to the same state in just 40 minutes.
+“the Weaveworks team was able to bring
+the system back up in about 40 minutes”
 
 [@266.00]
-It’s something I didn’t think it would be this fast.
+They are “pleased with their progress.”
 
 [@270.00]
-Weaveworks team came to talk and took off the script.
+“the team sat together and
+made a list of these principles”
 
 [@275.00]
-The CEO said that GitOps is a very strong word.
+And the CEO realized that
+
+[@278.68]
+“one word that describes
+all of this was ‘GitOps.’”
 
 [@285.00]
-So he took off the script and said what the principles are.
+So they tried to describe
+“the principles of GitOps.”
 
 [@288.00]
-It became a project called OpenGitOps.
+Later, it became a project
+called OpenGitOps.
 
 [@292.00]
-Let’s see what this project is about.
+Let’s see what it has to say.
 
-[@296.00]
-It’s a principle for managing the system and software.
+[@298.66]
+“GitOps is a set of principles for
+operating and managing software systems.”
 
 [@305.00]
-Generally speaking, we use GitOps in the context of Kubernetes.
+GitOps is usually used
+in the context of Kubernetes.
 
 [@311.00]
 Because it’s where GitOps comes from.
 
 [@314.00]
-The most famous tools in the world of Kubernetes are Flux, CD, Argo, CD.
+The most popular tools in the world of
+Kubernetes are Flux and ArgoCD.
 
 [@319.00]
 But I don’t use Kubernetes.
 
 [@322.00]
-Running Kubernetes and running it on the node is expensive.
+Running a Kubernetes cluster
+can be expensive.
 
 [@326.00]
 I usually use serverless.
 
 [@329.00]
-The good thing about serverless is that
+The good thing about serverless is that —
 
-[@333.00]
-I like it a lot.
+[@332.10]
+-
+
+[@334.41]
+In the talk before this one,
+Smith talks about serverless.
 
 [@337.00]
-I wrote about the logic app.
+I really like the Logic Apps.
 
 [@340.00]
-I dropped a comma and the function crashed.
+I tried creating a Function App before.
 
-[@345.00]
-When you put the wrong parameter and press deploy,
+[@342.43]
+When prototyping, sometimes I forgot
+a comma and the function crashed.
 
-[@349.00]
-The function will crash.
+[@346.78]
+Sometimes I put in the wrong parameter,
+deploy it, and get a 500 error.
 
 [@352.00]
-The logic app can be used to create a shortcut.
+Logic App seems like an easier option,
+it feels like the Shortcuts app.
 
 [@357.00]
-I’ll try it out.
+I’ll try it out!
 
 [@360.00]
-Thank you for coming to sell.
+Thank you for selling it.
 
 [@363.00]
-I like serverless because I don’t need to scale much.
+I like serverless because my personal
+projects and Creatorsgarten’s projects —
 
-[@370.00]
-If there is a server, it is expensive.
+[@368.24]
+They do not have many users.
+No need to scale to the masses.
+
+[@371.13]
+Running servers can be expensive.
 
 [@373.00]
-Last month, I paid for Azure to pay 1 baht.
+But with serverless —
+last month, I paid Azure
 
-[@377.00]
-It’s very expensive to use serverless.
+[@375.55]
+A total of one dollar.
+
+[@378.28]
+(Audience from Microsoft) Thank you.
+
+[@380.38]
+It’s very cost-effective
+to use serverless in my case.
 
 [@385.00]
 Let’s talk about GitOps.
@@ -272,49 +367,60 @@ OpenGitOps has 4 principles.
 Let’s see what are the 4 principles.
 
 [@395.00]
-The first one is declarative.
+The first one is “Declarative.”
 
 [@399.00]
-This rule says that the system that we will take care of with GitOps
+This principle says that the system
+that we will manage with GitOps —
 
 [@403.00]
 First, we have to explain what we want.
 
 [@408.00]
-It uses the word “desired state“.
+They use the word “desired state.”
 
 [@411.00]
-It’s like a description of the situation that we want our system to be.
+It’s like a description of the situation
+that we want our system to be in.
 
 [@417.00]
-For example, the rules.txt file that keeps the rules in the channel.
+For example,
 
-[@424.00]
-What should be the message?
+[@419.45]
+The rules.txt file describes
+“what should be in the #rules channel.”
 
 [@426.00]
-The second one is version and immutable.
+Next, “Versioned and Immutable.”
 
 [@429.00]
-We have to save this file in the version control.
+We have to put this file
+in a version control system.
 
 [@434.00]
-This file is stored in the GitHub.
+This file is stored on GitHub.
 
 [@437.00]
-The third one is push automatically.
+Next, “Pulled Automatically.”
 
 [@440.00]
-It says that there must be a software agent to pull the file automatically.
+There must be a software agent
+
+[@443.58]
+That pulls this declaration automatically.
 
 [@449.00]
-This is the moment I push GitHub, GitHub Action automatically works.
+The moment I push to GitHub,
+
+[@451.38]
+GitHub Action automatically runs.
 
 [@454.00]
-The last one is continuously reconciled.
+The last one is “Continuously Reconciled.”
 
 [@458.00]
-There must be a software agent to check the current state.
+There must be a software agent
+that checks the current state
 
 [@465.00]
 And compare it with what we want.
@@ -323,127 +429,155 @@ And compare it with what we want.
 And make it consistent.
 
 [@469.00]
-And we have to make it consistent.
+And do it continuously.
 
 [@473.00]
 These are the 4 principles.
 
 [@475.00]
-The fourth one is GitHub Action.
+In this example,
 
-[@477.00]
-The script that is running will update the message in the Discord.
+[@476.22]
+A script run by GitHub Actions
+will update the message in Discord
 
 [@480.00]
-To match the one in Git.
+To match the declaration in Git.
 
 [@482.00]
 There are 2 main ways to implement GitOps.
 
 [@488.00]
-Push base and pull base.
+Push-based and pull-based.
 
 [@490.00]
-We can do both.
+Both ways are viable.
 
 [@492.00]
-Push base is that we have a system that is just like it.
+Push-based is like we have a system
+that is just sits there.
 
 [@498.00]
-If we don’t do anything with this system, it will be like it.
+If we don’t do anything to it,
+it will stay the same.
 
 [@501.00]
-But what we do is we put the configs in the GitHub repo.
+But what we do is we put our
+config files in a GitHub repo.
 
 [@507.00]
-And as soon as we push, there will be a CI process working.
+And as soon as we push,
+
+[@509.10]
+A CI process will start working.
 
 [@512.00]
-And do the make change task.
+And it will make change to the system
 
 [@515.00]
-Make the system change as we want.
+As we desired.
 
 [@518.00]
-This means that our CI process must have a key that can go in and fix it.
+This means that our CI process
 
-[@526.00]
-Or change the system.
+[@522.09]
+Must hold a key that gives it
+permission to change the system.
 
 [@529.00]
-It means that our system must open the window for the CI to fix it.
+It means that our system must open a way
+for external systems, like the CI,
+
+[@534.64]
+To make changes to it.
 
 [@536.00]
-Some people think that it’s a risk of security.
+Some people sees it as a security risk.
 
 [@540.00]
 Especially if it’s Kubernetes.
 
 [@542.00]
-Some people hide the cluster behind the VPC.
+Some people put the cluster in a VPC.
 
 [@545.00]
-And the CI can’t connect to it.
+And external CI can’t connect to it.
 
 [@548.00]
-They say that people who use Kubernetes don’t like to push base.
+In short — the Kubernetes community seems
+to not prefer the push-based approach.
 
 [@553.00]
-If we’re in the Kubernetes world, we’ll mostly use pull base.
+If we’re in the Kubernetes world,
+we’ll mostly use a pull-base solution.
 
 [@559.00]
-What is pull base?
+What is pull-based?
 
 [@561.00]
-We put the GitOps operator in the system.
+We put a “GitOps operator” in the system.
 
 [@566.00]
-And GitOps operator will pull the code from GitHub.
+And GitOps operator will
+pull the code from GitHub
 
 [@569.00]
-And do the change of the system status.
+And make changes to the system.
 
 [@573.00]
-The good thing is that everything happens in the system.
+The good thing is that everything
+happens inside the system.
 
 [@576.00]
-You don’t have to set up anything complicated.
+You don’t have to set up
+anything complicated.
 
 [@580.00]
-But it’s complicated when setting up Kubernetes.
+Although setting up Kubernetes
+can be complicated in and of itself.
 
 [@583.00]
 Everything happens in the system.
 
 [@586.00]
-The first example I showed you about Discord is push base.
+The first Discord example I showed you
+is usinga a push-based approach.
 
 [@590.00]
-Let’s move this image out and see the high level.
+Let’s look at this
+from an even higher level.
 
 [@595.00]
-You can see that GitOps consists of 3 main parts.
+You can see that GitOps
+consists of 3 main parts.
 
 [@601.00]
-The leftmost part is Git that keeps the desired state.
+The leftmost part is Git
+
+[@604.60]
+It keeps the desired state
 
 [@606.00]
-That we want our system to be in what condition.
+That describes what condition
+we want our system to be in.
 
 [@610.00]
-The right side is the real system that is running.
+On the right is the actual system.
 
 [@613.00]
-And we have our own reconciliation system.
+And in the center is a
+reconciliation system.
 
 [@617.00]
-We make the left and right sides the same.
+It reconciles the left side
+and the right side.
 
 [@620.00]
-The main thing is to adjust the right side to what we want in the left.
+It adjusts the right side
+to what we want on the left.
 
 [@624.00]
-How can we make a reconciler this time?
+How do we create a reconciler?
 
 [@628.00]
 The answer is it depends.
@@ -452,25 +586,27 @@ The answer is it depends.
 It depends on how you use it.
 
 [@633.00]
-If you use Kubernetes, you can go to Argo or Flux.
+If you use Kubernetes,
+you can use Argo or Flux.
 
 [@636.00]
 As for other cases, we’ll see.
 
 [@638.00]
-First of all, the cloud infrastructure.
+First example — cloud infrastructure
 
 [@641.00]
-Cloud infrastructure is AWS, Azure, Google Cloud.
+Such as AWS, Azure, Google Cloud.
 
 [@645.00]
-If we do manual operation, right?
+If we do manual operation?
 
 [@648.00]
-If we don’t have GitOps yet, how do we do manual operation?
+If we don’t have GitOps yet,
+how do we do manual operation?
 
 [@651.00]
-Go to the port and click on each one.
+Go to the Portal and do things one by one.
 
 [@654.00]
 Review, Create, Create,
