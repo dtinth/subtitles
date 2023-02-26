@@ -1977,139 +1977,118 @@ The status is unlisted.
 Because it’s not published yet.
 
 [@1838.00]
-Because the database.
-
-[@1840.00]
-The local database is in the same repo.
+Since the local database
+is in the same repo.
 
 [@1842.00]
-We can run this command.
+Anyone can run this command
+to preview the changes,
 
-[@1844.00]
-Even if we don’t have access.
-
-[@1846.00]
-To the YouTube API.
+[@1844.34]
+Even if they don’t have
+the YouTube API credentials.
 
 [@1848.00]
-It can preview everything.
+The changes can be easily previewed.
 
 [@1850.00]
-Then we take the same step.
+Then it’s the same GitOps workflow.
 
-[@1852.00]
-The same step.
+[@1853.06]
+Push to Git.
 
-[@1854.00]
-KIT.
+[@1854.39]
+GitHub Actions starts working.
 
-[@1856.00]
-When KIT HUB action works.
-
-[@1858.00]
+[@1857.50]
 When you press refresh.
 
-[@1860.00]
+[@1859.16]
 It will be like this.
 
-[@1862.00]
-Description of everything.
+[@1861.53]
+All the description is here now.
 
 [@1864.00]
-Or the original thumbnail.
+Here’s the original thumbnail.
 
 [@1866.00]
-We will crop a frame.
-
-[@1868.00]
-And put it in.
+We replaced it with
+a slightly better thumbnail.
 
 [@1870.00]
 Done.
 
 [@1872.00]
-Then it will.
-
-[@1874.00]
-Write the status file.
-
-[@1876.00]
-Write in KIT HUB.
+Then the updated state file
+is saved back into GitHub.
 
 [@1878.00]
-It will upload tomorrow.
-
-[@1880.00]
-It will update tomorrow.
+Everything is now up-to-date.
 
 [@1882.00]
-So.
+So —
 
 [@1884.00]
-About opening a YouTube channel.
+About running a YouTube channel,
 
 [@1886.00]
 I don’t have much experience.
 
 [@1888.00]
-And.
+And —
 
 [@1890.00]
 But I know.
 
 [@1892.00]
-There are people who can take care of the YouTube channel.
+There are people who knows
+how to manage a YouTube channel.
 
-[@1894.00]
+[@1895.04]
 There are people who know better than me.
 
-[@1896.00]
-Those people should have the power.
+[@1896.76]
+-
 
-[@1902.00]
-In taking care of our YouTube.
+[@1900.23]
+Those people should have the power to
+improve and grow our YouTube channel.
 
 [@1906.00]
-Using KIT OPS.
+Using GitOps —
 
 [@1908.00]
-I think it’s a good way.
+I think it’s a really great way
 
-[@1912.00]
-To empower.
-
-[@1914.00]
-To empower people in the community.
+[@1913.44]
+To empower people in the community
 
 [@1916.00]
 To create things together.
 
-[@1918.00]
+[@1920.00]
 So.
 
-[@1920.00]
-When I think of KIT OPS.
+[@1921.26]
+When I think of GitOps a lot.
 
 [@1924.00]
-I look at the system.
-
-[@1926.00]
-I see KIT OPS.
+I look at various systems and
+see how GitOps may be applied.
 
 [@1928.00]
-I may ask.
+A question may arise:
 
 [@1930.00]
-What else can we do with KIT OPS?
+What else can we GitOps?
 
-[@1932.00]
-It’s over.
+[@1932.51]
+-
 
-[@1934.00]
-Thank you very much.
-
-[@1936.00]
-[Applause]
+[@1933.62]
+That’s the end of the presentation.
+Thank you very much!
 
 [@1938.00]
 -
