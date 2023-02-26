@@ -1391,31 +1391,20 @@ They can open pull requests
 to participate in the project.
 
 [@1350.00]
-Work.
-
-[@1352.00]
-I wrote this.
-
-[@1354.00]
-I’ll give you an example.
+I’ll show you how the reconciler works
 
 [@1356.00]
-How to write a reconciler.
+So you know how to write
+your own reconciler.
 
-[@1358.00]
-First, load.
-
-[@1360.00]
-What do we want it to look like?
+[@1359.24]
+1. Load the desired state.
 
 [@1362.00]
-Two, it’s a query.
-
-[@1364.00]
-What is the current look like?
+2. Query the current system state.
 
 [@1366.00]
-Three, let’s compare.
+3. Compare them.
 
 [@1368.00]
 Here, let’s compare like this.
@@ -1424,7 +1413,8 @@ Here, let’s compare like this.
 When compared, we will know.
 
 [@1372.00]
-What to create, what to delete, what to fix.
+What to create, what to delete,
+what to update.
 
 [@1374.00]
 And we’ll apply it to the real system.
@@ -1432,422 +1422,368 @@ And we’ll apply it to the real system.
 [@1376.00]
 It will be like this.
 
-[@1378.00]
-Example 5.
+[@1379.36]
+-
 
-[@1382.00]
-Discord server.
+[@1380.73]
+Example 5 — Discord server.
 
-[@1384.00]
-This is the demo at the beginning.
+[@1382.62]
+This is the demo in the beginning.
 
-[@1386.00]
+[@1384.14]
 I’ll show you how I created it.
 
-[@1388.00]
-I wrote the script myself.
+[@1387.03]
+I also wrote my own reconciler here.
 
-[@1390.00]
-In the channel, we can create what we call webhooks.
+[@1388.81]
+In a Discord channel,
+we can create “webhooks.”
 
 [@1392.00]
-When creating webhooks.
+When created, the webhook will
+be linked to the channel
 
-[@1394.00]
-Webhooks will connect to the channel.
+[@1395.42]
+And we will get a URL.
 
-[@1396.00]
-We will have a URL.
+[@1396.96]
+We can use this URL and sent it
+an HTTP POST request.
 
-[@1398.00]
-We can use this URL to shoot HTTP.
+[@1399.71]
+Send it some content.
 
-[@1400.00]
-Post content.
+[@1402.75]
+And the bot will post on the channel.
 
-[@1402.00]
-When sending content, the bot will post.
+[@1406.33]
+It will also return an ID.
 
-[@1404.00]
-This time, it will return the ID value.
+[@1408.47]
+We can use this ID to send
 
-[@1406.00]
-We can use this ID to shoot HTTP.
+[@1410.45]
+An HTTP PATCH request.
 
-[@1408.00]
-It will be used to fix the message.
+[@1415.02]
+The message will be edited.
 
-[@1410.00]
+[@1419.23]
 It’s easy.
 
-[@1412.00]
-I wrote the script.
+[@1420.15]
+I wrote this 34-line script.
 
-[@1414.00]
-This is script 34.
+[@1423.33]
+It reads the rules.txt file,
 
-[@1416.00]
-It reads the file root and text.
+[@1425.52]
+Split into smaller messages.
 
-[@1418.00]
-We’ll split it.
+[@1428.65]
+And send a PATCH request
+to the specified message IDs.
 
-[@1420.00]
-Split it into a few messages.
-
-[@1422.00]
-And shoot the patch.
-
-[@1424.00]
-Put the ID in.
-
-[@1426.00]
+[@1431.71]
 Something like this.
 
-[@1428.00]
+[@1432.92]
 It’s convenient.
 
-[@1430.00]
-It’s convenient.
+[@1434.48]
+-
 
-[@1432.00]
-It’s convenient.
-
-[@1434.00]
-This time, the script I wrote is simpler than the previous one.
+[@1438.14]
+In this example, the script I wrote is
+simpler than the previous one.
 
 [@1442.00]
-Because it just loads what we want it to be.
+It loads the desired state
 
-[@1444.00]
-And write what we want.
+[@1445.38]
+And set the actual system state to it.
 
-[@1446.00]
-No need to check the original.
+[@1447.42]
+No need to check how it
+originally looks like.
 
-[@1448.00]
-How it looks like.
+[@1450.66]
+Just replace the contents.
 
-[@1450.00]
-You can replace it like this.
+[@1453.96]
+I started by writing some simple message.
 
-[@1452.00]
-This time, when I did it.
-
-[@1456.00]
-I wrote something.
-
-[@1458.00]
-It’s easy.
-
-[@1460.00]
-I wrote a message.
+[@1459.07]
+I added a link to “edit the message.”
 
 [@1462.00]
 Someone contributed.
 
-[@1464.00]
+[@1463.55]
 I don’t know how to manage Discord server.
 
 [@1466.00]
-I don’t know what to add.
+I don’t know what to put in the rules.
 
 [@1468.00]
 Someone contributed.
 
 [@1470.00]
-They added a button.
+They added a bunch of rules.
 
 [@1472.00]
-As a server member.
+The contributor doesn’t even
+have to be a server admin.
 
-[@1474.00]
-No need to be an admin.
+[@1474.43]
+Even then, they can help setting
+the rules for our server.
 
-[@1476.00]
-You can help write the button for our server.
+[@1479.60]
+Thanks to @Thanyanit-J for this!
 
-[@1478.00]
-I have to thank Khun Khanyanit J.
+[@1483.08]
+-
 
-[@1482.00]
+[@1485.16]
+By the way,
+
+[@1486.38]
 If you use Terraform.
 
-[@1488.00]
+[@1488.08]
 There’s a Discord provider.
 
-[@1490.00]
-If you don’t want to fix only messages.
+[@1489.82]
+If you want to manage
+more than just messages,
 
 [@1492.00]
-You can create and manage
+You want to manage roles,
+categories, and channels,
 
-[@1494.00]
-the low channel categories.
+[@1497.38]
+You can do it with Terraform.
 
-[@1496.00]
-Through Terraform.
+[@1501.51]
+-
 
-[@1498.00]
-If you want to find it, you can do it.
-
-[@1500.00]
+[@1502.70]
 The last example.
 
-[@1504.00]
+[@1504.41]
 YouTube channel.
 
 [@1506.00]
-Can we take care of it?
-
-[@1508.00]
-This one.
+Can we GitOps it?
 
 [@1510.00]
-This is Creatorsgarten channel.
+This is the Creatorsgarten
+YouTube channel.
 
 [@1512.00]
-We set up take-meet-ups.
+We organize tech meetups.
 
 [@1514.00]
-And take-meet-ups.
-
-[@1516.00]
-When someone presents.
-
-[@1518.00]
-After we go live.
+When speakers present, after going live,
 
 [@1520.00]
-We cut the clips.
+We cut the clips
 
-[@1522.00]
-And upload to YouTube channel.
+[@1521.40]
+And upload them to our YouTube channel.
 
 [@1524.00]
-There are only 150 subscribers.
+Now there are only 150 subscribers.
 
-[@1526.00]
+[@1526.51]
 It’s a new channel.
 
-[@1528.00]
-You can subscribe first.
-
-[@1530.00]
-Now.
+[@1528.17]
+Please consider subscribing to it.
 
 [@1532.00]
-Each video.
+In each video,
 
 [@1534.00]
-I want it to have a description.
+I want it to have a description
 
-[@1536.00]
-In a similar format.
+[@1535.69]
+In a consistent format.
 
 [@1538.00]
 This is the description.
 
 [@1540.00]
-If you have to write it yourself.
+If I have to write them all,
 
 [@1542.00]
 It’s exhausting.
 
 [@1544.00]
-If you want to automate it.
+I wanted to automate the process.
 
 [@1546.00]
 It’s not just this.
 
 [@1548.00]
-Talk, description, timestamp.
+Talk description, timestamps, etc.
 
-[@1550.00]
-If you want the logo clip to be inter.
+[@1549.91]
+If you want the video to be able
+to reach an international audience.
 
-[@1552.00]
-You have to have an English description.
-
-[@1554.00]
-Localization.
+[@1552.60]
+It should have an English description.
 
 [@1556.00]
-If you use YouTube.
-
-[@1558.00]
-English version.
+If you set the language
+in YouTube to English,
 
 [@1560.00]
 You will get an English description.
 
 [@1562.00]
-Some talks.
+In some talks,
 
 [@1566.00]
-If the owner of the talk has time.
+If the speaker has the time to do it,
 
-[@1568.00]
-Put the English subtitle.
-
-[@1570.00]
-You can upload the subtitle.
-
-[@1572.00]
-And.
+[@1569.50]
+They can upload an English subtitle
+to the video on our channel.
 
 [@1574.00]
 Besides this.
 
 [@1576.00]
-Talk’s name.
+If we use the talk title
+as the video title,
 
-[@1578.00]
-If we use the name of the talk to be the clip name.
+[@1578.22]
+Sometimes it’s not as engaging.
 
-[@1580.00]
-It’s not clickable.
+[@1579.59]
+We have to make it possible to
+customize the video title,
 
-[@1582.00]
-We have to make it possible.
+[@1585.26]
+Both Thai and English.
 
-[@1584.00]
-Customize the clip’s name.
+[@1588.23]
+-
 
-[@1586.00]
-And put it in English.
-
-[@1588.00]
-Finally.
-
-[@1590.00]
-Thumbnail.
+[@1589.48]
+Finally, the thumbnail.
 
 [@1592.00]
-All of these.
+All of these can be edited
+by sending us a pull request.
 
-[@1594.00]
-You can fix it all.
-
-[@1596.00]
+[@1594.56]
 There are many speakers in our group.
 
-[@1598.00]
-But not all speakers.
-
-[@1600.00]
-We have to make it accessible.
+[@1598.64]
+But not all speakers has access
+to our channel’s YouTube Studio.
 
 [@1602.00]
-So we think.
-
-[@1604.00]
-We can make anyone contribute.
+By using GitOps, anyone can contribute.
 
 [@1606.00]
 Like I said.
 
 [@1608.00]
-Everything is on GitHub.
+Everything is on a GitHub repo
 
 [@1610.00]
-It’s a report called
-
-[@1612.00]
-Creatorsgarten / Videos.
+creatorsgarten/videos.
 
 [@1614.00]
-In each folder.
+In each folder there will be talk files.
 
-[@1616.00]
-There will be talks.
-
-[@1618.00]
-There will be file.md that stores metadata.
+[@1617.13]
+There will be an .md file
+that stores the metadata.
 
 [@1620.00]
-It’s a yaml like this.
+It contains a YAML frontmatter.
 
 [@1622.00]
-And.
+-
 
 [@1624.00]
-The top is a jpeg file.
+At the top is a JPEG file.
 
 [@1626.00]
-It’s a thumbnail of the clip.
+It’s a thumbnail of the video.
 
 [@1628.00]
-And the bottom is a subtitle file.
+And at the bottom is a subtitles file.
 
-[@1630.00]
-When I made the pipeline.
+[@1631.41]
+-
+
+[@1632.88]
+When I made this pipeline,
 
 [@1634.00]
-There was a problem.
+There was a couple of problems.
 
 [@1636.00]
 YouTube API.
 
-[@1638.00]
-There’s a quota to shoot API.
+[@1637.33]
+There’s a daily quota.
 
-[@1640.00]
-If we shoot a lot of API.
+[@1639.77]
+If we use the API a lot,
 
-[@1642.00]
+[@1640.85]
 The quota is full.
 
-[@1644.00]
-Another thing.
+[@1641.90]
+Can no longer use the API.
 
-[@1646.00]
-There’s no YouTube provider.
+[@1643.44]
+Failed.
 
-[@1648.00]
-Which is.
+[@1645.37]
+Moreover, there’s no YouTube provider
+for either Pulumi or Terraform.
 
 [@1650.00]
-It’s understandable.
-
-[@1652.00]
-Why there’s no.
+That’s completely understandable.
 
 [@1654.00]
-So I have to write.
+But it means that I have to write
+my own reconciler again.
 
-[@1656.00]
-I have to write a compiler.
+[@1659.37]
+The technique is:
 
-[@1658.00]
-The technique is.
+[@1660.92]
+I created a “local database.”
 
-[@1660.00]
-I created what is called a local database.
+[@1664.07]
+The principles are the same.
 
-[@1662.00]
-The same principle.
+[@1665.59]
+But instead of querying the YouTube API,
 
-[@1664.00]
-But instead of checking.
-
-[@1666.00]
-By curing YouTube API.
-
-[@1668.00]
-We curate the database.
-
-[@1670.00]
-Which is our local.
+[@1669.29]
+We query this local database instead.
 
 [@1672.00]
-So.
+-
 
 [@1674.00]
-The first and second.
+(1.) and (2.) are the same,
 
 [@1676.00]
-Just curate the local database.
+We just query the local database instead.
 
 [@1678.00]
 And we’ll get the same change.
@@ -1861,221 +1797,175 @@ And when it’s applied to the real system.
 [@1684.00]
 We can update our local database.
 
-[@1686.00]
-This time.
+[@1686.78]
+Now,
 
-[@1688.00]
-Where do you keep the local database?
+[@1687.76]
+Where to keep the local database?
 
-[@1690.00]
-I keep it in the grid.
+[@1689.64]
+I keep it in the same Git repo,
 
-[@1692.00]
-There’s a file called YouTube Sync.yml.
+[@1691.45]
+in a file called youtube-sync.yml.
 
 [@1694.00]
 It will keep all the states.
 
 [@1696.00]
-For example.
+For example,
 
 [@1698.00]
-When there’s an update of the thumbnail file.
+When updating a thumbnail file,
 
 [@1700.00]
-I’ll keep the hash.
+I’ll keep the file hash,
 
-[@1702.00]
-In the future.
+[@1701.50]
+So that in the future,
 
-[@1704.00]
-If the file changes.
+[@1703.33]
+If the file changes,
 
-[@1706.00]
-We can compare the hash with the state.
+[@1704.60]
+We can compare the hash with this state.
 
 [@1708.00]
-We’ll get it.
+If the hash is unchanged,
+we don’t have to upload it again.
 
-[@1710.00]
-If it doesn’t change.
+[@1713.74]
+The same goes for subtitles.
 
-[@1712.00]
-The subtitle is the same.
+[@1716.35]
+As well as video metadata.
 
-[@1714.00]
-Including metadata.
+[@1718.68]
+We can compare between the contents
+currently on the channel
 
-[@1716.00]
-Make it possible to compare.
+[@1722.73]
+And what we want it to be
 
-[@1718.00]
-Compare the content on the channel.
+[@1724.41]
+Without having to call the YouTube API.
 
-[@1720.00]
-And what we want it to be.
+[@1727.09]
+Finally, when we upload a caption
+to the YouTube API.
 
-[@1722.00]
-Without having to shoot YouTube API.
+[@1730.85]
+It will give you an ID.
 
-[@1724.00]
-Finally, when we upload the caption.
-
-[@1726.00]
-On YouTube API.
-
-[@1728.00]
-It will give you the ID back.
-
-[@1730.00]
+[@1732.74]
 If you go back to the previous slide.
 
-[@1732.00]
-You’ll see that.
+[@1734.23]
+You’ll see that just listing the
+video captions costs 50 points.
 
-[@1734.00]
-Just listing.
-
-[@1736.00]
-What video has caption.
-
-[@1738.00]
-It’s been 50 points.
-
-[@1740.00]
-I have to keep the ID.
+[@1740.90]
+-
 
 [@1742.00]
-In the local state.
+So, I keep the ID in the local state.
 
-[@1744.00]
-When we update the caption.
+[@1746.27]
+When we update the caption,
+we know which caption ID to update.
 
-[@1746.00]
-We can update it.
+[@1750.22]
+Without having to query the YouTube API.
 
-[@1748.00]
-Without having to go to the Qly API.
-
-[@1750.00]
+[@1754.43]
 What does it mean?
 
-[@1752.00]
-When I publish the video.
+[@1755.72]
+Now, when I want to publish a video,
 
-[@1754.00]
-When I publish the video.
+[@1759.98]
+I just change the metadata file
+from published: false to true.
 
-[@1756.00]
-I just fix the false and true here.
+[@1763.02]
+When GitHub Actions finishes running,
 
-[@1758.00]
-When the action is done.
-
-[@1760.00]
+[@1764.74]
 It will update the database.
 
-[@1762.00]
-From the privacy that is unlisted.
+[@1766.31]
+From the privacyStatus that
+was unlisted, it is now public.
 
-[@1764.00]
-To public.
+[@1771.63]
+Now,
 
-[@1766.00]
-I’ll show you.
-
-[@1768.00]
-It will be like this.
-
-[@1770.00]
-This time.
-
-[@1772.00]
-When we have a new video.
+[@1773.09]
+When we add a new video.
 
 [@1774.00]
 What do we do?
 
-[@1776.00]
-I uploaded the video on YouTube.
+[@1775.24]
+1. I uploaded the video on YouTube.
 
 [@1778.00]
 But I didn’t put any description.
 
 [@1780.00]
-No data.
+No metadata whatsover. All default.
 
 [@1782.00]
 Then I copied the URL.
 
 [@1784.00]
-When I copied the URL.
+Once I copied the URL,
 
 [@1786.00]
-I ordered the script.
-
-[@1788.00]
-To import.
+I ran the import script.
 
 [@1790.00]
 Put the URL in.
 
 [@1792.00]
-Put the name.
+Put in the talk name and event name.
 
 [@1794.00]
-Information about which event.
+Do this to all the uploaded videos.
 
 [@1796.00]
-Then it will generate this file.
+Then it will generate these data files.
 
 [@1800.00]
-These JPEG files.
-
-[@1802.00]
-It’s a thumbnail that YouTube generates.
+The JPEG files are the thumbnails
+that YouTube automatically generates.
 
 [@1804.00]
-Import it.
+They will be imported into the project.
 
-[@1806.00]
-Then.
+[@1807.03]
+Then,
 
 [@1808.00]
-There will be a template file.
+Here’s the template file.
 
-[@1810.00]
-I’ll put the information in.
+[@1810.75]
+I’ll put the information in like this.
 
-[@1812.00]
-Like this.
-
-[@1814.00]
+[@1815.66]
 Then I run the sync command.
 
-[@1816.00]
-The sync command.
+[@1819.27]
+It will let us preview
 
-[@1818.00]
-It will preview.
-
-[@1820.00]
-From the information in the KIT.
-
-[@1822.00]
-Now.
+[@1821.01]
+Based on the data in Git right now,
 
 [@1824.00]
-What changes will happen to our channel?
+What changes will happen to our channel.
 
 [@1826.00]
-It will say.
-
-[@1828.00]
-We have to update.
-
-[@1830.00]
-We have to update.
+The output says that it’s gonna update
 
 [@1832.00]
 The description of this video.
@@ -2084,13 +1974,13 @@ The description of this video.
 The status is unlisted.
 
 [@1836.00]
-Because it’s not public yet.
+Because it’s not published yet.
 
 [@1838.00]
 Because the database.
 
 [@1840.00]
-The local database is in the same report.
+The local database is in the same repo.
 
 [@1842.00]
 We can run this command.
