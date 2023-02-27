@@ -1,0 +1,935 @@
+[@0.66]
+Hello everyone!
+
+[@1.52]
+This talk is about
+
+[@2.53]
+“The amazing flexibility of Web MIDI
+API and its surrounding ecosystem.”
+
+[@8.72]
+First, let me introduce myself.
+
+[@10.81]
+My name is Thai Pangsakulyanont.
+
+[@12.63]
+I'm a software engineer
+but I also enjoy playing music.
+
+[@16.52]
+^What I don’t particularly enjoy
+
+[@18.47]
+^is having to carry
+musical instruments around.
+
+[@21.94]
+Still, when I’m outside,
+
+[@23.59]
+I want to be able to play music
+with friends using just my laptop
+
+[@27.40]
+plus a few equipments, like a speaker.
+
+[@30.19]
+So, I built my own web-based setup.
+
+[@32.63]
+^I call it WebMIDICon
+
+[@33.99]
+^And I showed it at JSConf.Asia 2016.
+
+[@38.11]
+In 2020, the pandemic happened
+
+[@40.34]
+and in 2021 we were in lockdown.
+
+[@43.27]
+During that time
+
+[@44.15]
+^I found a software called "Jamulus"
+
+[@46.33]
+^that I can use to play music
+with friends online in realtime.
+
+[@50.50]
+^So I and a few friends started jamming
+from our own homes and livestreamed it.
+
+[@55.30]
+^This attracted more people
+to join our servers,
+
+[@58.48]
+^and our online jamming community
+started to grow from there,
+
+[@62.58]
+^and we got to perform
+at a few virtual events,
+
+[@65.21]
+^such as PyCon APAC 2021.
+
+[@68.80]
+It had become my new favorite hobby
+
+[@71.19]
+and it gave me a lot of motivation
+
+[@73.01]
+to explore about making music
+using web technologies.
+
+[@76.96]
+And today, I want to share
+my experience with you
+
+[@79.44]
+In particular, about Web MIDI API.
+
+[@82.58]
+So, let’s start with the basics
+
+[@84.67]
+What is the Web MIDI API?
+
+[@87.28]
+^The specification tells us
+
+[@89.20]
+^that it “provides a means
+
+[@90.66]
+^“for web developers to enumerate,
+manipulate, and access MIDI devices.”
+
+[@96.07]
+^But what is MIDI? Well, MIDI, or
+
+[@99.76]
+^Musical Instrument Digital Interface,
+
+[@102.44]
+^is “a technical standard that describes
+
+[@104.64]
+^“a communications protocol, digital
+interface, and electrical connectors”
+
+[@108.71]
+^that you can read about on Wikipedia.
+
+[@110.93]
+^So for this talk, let’s see
+what it lets us do!
+
+[@113.97]
+^I’m going to use my browser
+to demonstrate this.
+
+[@116.69]
+^But remember that Web MIDI API
+is used to access MIDI devices?
+
+[@120.66]
+^First, I need to hook a
+MIDI device to my computer.
+
+[@124.88]
+^This is a MIDI cable
+
+[@127.13]
+^and it would be plugged
+in to a MIDI device,
+
+[@129.75]
+^like an electric piano.
+
+[@131.93]
+^As you see, there are separate
+connections for input and output.
+
+[@136.90]
+Then, using a MIDI-to-USB adapter,
+I can connect it to my computer.
+
+[@142.49]
+However, many modern keyboards,
+
+[@144.92]
+such as this one, no longer
+come with MIDI ports,
+
+[@149.09]
+and instead just uses the USB port
+
+[@152.65]
+so I’m just gonna plug
+that into my computer.
+
+[@155.76]
+-
+
+[@158.79]
+^Now, on a browser,
+
+[@160.03]
+^I can access my MIDI device
+
+[@162.18]
+^First, by requesting for a MIDI access.
+
+[@165.57]
+-
+
+[@167.76]
+Again, inputs and outputs are separate.
+
+[@170.44]
+So, let’s look at the input first.
+
+[@173.35]
+-
+
+[@174.13]
+`midi.inputs` is a map-like structure,
+
+[@176.85]
+and I can use the `for-of` loop
+to enumerate all the input ports.
+
+[@181.57]
+Now I have the port ID.
+
+[@183.60]
+I will use the `get` method
+to obtain the port object.
+
+[@187.54]
+^Then, I will listen to
+the `onmidimessage` event.
+
+[@191.11]
+-
+
+[@192.13]
+^And when I press enter,
+
+[@193.85]
+^I start seeing MIDI messages from
+the keyboard showing up in my console.
+
+[@198.53]
+^These messages come as an byte array.
+
+[@201.48]
+Some messages are just a single byte,
+
+[@203.99]
+while some other messages
+are 3 bytes long.
+
+[@208.47]
+The MIDI specification has a table that
+shows what each of these message mean,
+
+[@213.43]
+but they are written in
+a hexadecimal notation.
+
+[@217.26]
+So, I will have to adjust my code
+to format it accordingly.
+
+[@221.30]
+-
+
+[@222.64]
+Now that’s better!
+
+[@223.84]
+And we’re seeing a bunch of 0xFE.
+
+[@226.56]
+Looking at the specification again,
+
+[@229.03]
+0xFE corresponds to the
+"Active Sensing" message
+
+[@232.54]
+Which is basically a heartbeat message
+
+[@234.89]
+So I’ll change my code to ignore that.
+
+[@237.79]
+-
+
+[@240.20]
+I’ll try playing again.
+
+[@241.92]
+When I press the keys, I see status 90,
+
+[@245.00]
+which means "Note On".
+
+[@246.71]
+And when I release, I see the status 80,
+
+[@249.61]
+which means "Note Off".
+
+[@251.75]
+-
+
+[@253.58]
+Let’s focus on the Note On messages.
+
+[@256.30]
+The specification says that
+there are 2 data bytes.
+
+[@260.08]
+When I press the same key,
+the first data byte stays the same,
+
+[@264.25]
+but the second data byte tells me
+
+[@266.57]
+the velocity of hitting the key.
+
+[@269.33]
+And as I play different notes,
+
+[@271.37]
+I get a different first data byte.
+
+[@274.57]
+-
+
+[@277.13]
+And with a bit of code and some help
+from the library, WebMIDI.js,
+
+[@281.47]
+I can create a web application that
+visualizes the MIDI data in real time.
+
+[@286.58]
+-
+
+[@291.58]
+Ok, so we’ve seen MIDI input.
+Now let’s try MIDI output.
+
+[@296.47]
+Again, we start by getting
+the port that we want.
+
+[@301.18]
+Once we have the port, we can call the
+`send` method to send MIDI messages
+
+[@305.67]
+according to the specification.
+
+[@307.78]
+-
+
+[@308.94]
+[a single note plays]
+
+[@310.42]
+And now, my keyboard is making sounds.
+
+[@313.08]
+-
+
+[@314.35]
+Let's make it play more notes this time.
+
+[@316.35]
+-
+
+[@318.49]
+[an arpeggio plays]
+
+[@321.03]
+And that’s how we can
+communicate with a MIDI device.
+
+[@324.59]
+What happened here is when
+a web app uses the Web MIDI API,
+
+[@328.94]
+the browser will then use
+
+[@330.51]
+the MIDI Framework provided
+by the operating system,
+
+[@333.89]
+which in turn communicates
+with the MIDI device for us.
+
+[@338.13]
+So, with the Web MIDI API,
+
+[@340.19]
+I created WebMIDICon,
+
+[@342.57]
+a collection of web-based
+MIDI control surfaces.
+
+[@346.02]
+Since it’s a web app, it can be
+used on a variety of devices.
+
+[@350.63]
+And by editing the source code,
+I can customize it to my liking.
+
+[@355.04]
+Most often, I use it to play
+notes using my PC keyboard.
+
+[@359.09]
+I have set up the key mapping
+
+[@360.87]
+to allow for playing 3 octaves
+of notes at the same time.
+
+[@365.03]
+It also gave me quick access
+to the “transpose” function,
+
+[@368.00]
+so I can switch to a different key
+without having to adjust my fingering.
+
+[@372.22]
+-
+
+[@373.29]
+This web application sends MIDI signals,
+but couldn’t generate a sound on its own.
+
+[@378.49]
+I need another device that receives
+these signals and generate a sound
+
+[@383.19]
+And right now, it’s the electric
+keyboard that you are hearing.
+
+[@387.13]
+But as you know
+
+[@388.11]
+I don’t want to carry that around.
+
+[@389.81]
+So something has to be done.
+
+[@391.96]
+-
+
+[@393.63]
+Fortunately, macOS has an IAC Driver.
+
+[@397.33]
+IAC stands for Inter-App Communication.
+
+[@400.69]
+To access it, first I go to
+the Audio MIDI Setup app
+
+[@404.42]
+and open the MIDI studio.
+
+[@406.66]
+Then, I select the IAC Driver
+and create a new bus.
+
+[@411.11]
+This creates a virtual
+loopback MIDI cable
+
+[@414.10]
+Which shows up as new MIDI device.
+
+[@417.52]
+Then, I can open an app, like GarageBand,
+and send MIDI messages to it.
+
+[@422.74]
+-
+
+[@434.32]
+As you can see,
+
+[@435.72]
+there are many ways that
+applications and MIDI devices
+
+[@438.94]
+can communicate with each other,
+
+[@441.31]
+and this brings us to the second part,
+
+[@444.13]
+Ways to connect MIDI.
+
+[@446.66]
+So far, we’ve seen two ways:
+
+[@448.95]
+First, using a USB cable to communicate
+with a physical MIDI device.
+
+[@453.26]
+And second,
+
+[@454.53]
+using the IAC driver to communicate
+between apps on the same computer.
+
+[@459.30]
+In this part, I’ll show you more examples
+of how different devices and applications
+
+[@463.65]
+can be connected together
+to exchange MIDI data.
+
+[@466.69]
+And, here we go!
+
+[@468.43]
+Here, I’m running GarageBand on my iPad.
+
+[@471.22]
+I can go to Advanced Settings
+and select Bluetooth MIDI Devices.
+
+[@475.04]
+Then on my Audio MIDI Setup, I can
+click on the Bluetooth icon here
+
+[@478.96]
+and pair them up.
+
+[@481.71]
+Once they’re paired up, I can now
+use my iPad as a synthesizer.
+
+[@486.25]
+-
+
+[@487.55]
+Next,
+
+[@488.40]
+there is an iOS app called
+“Web MIDI Browser.”
+
+[@491.73]
+This is a web browser that provides
+support for the Web MIDI API.
+
+[@495.71]
+-
+
+[@496.66]
+Here, I can use my iPad as a drum pad.
+
+[@499.71]
+-
+
+[@507.08]
+Next, when I connect an iPad or iPhone
+to my Mac using a cable,
+
+[@511.34]
+I can go to Audio MIDI Setup and enable
+the "Inter-device audio and MIDI mode."
+
+[@517.46]
+Once it’s enabled, my iPad
+becomes a MIDI device,
+
+[@520.54]
+and this lets me play
+with even lower latency.
+
+[@524.08]
+-
+
+[@526.87]
+Now, let’s look at Android.
+
+[@528.99]
+Google Chrome on Android supports
+the Web MIDI API out-of-the-box.
+
+[@533.07]
+Here, I plugged in the CASIO keyboard
+to my phone via USB, and it just works.
+
+[@538.37]
+-
+
+[@549.82]
+^Next, on Android, there’s also
+an app called "FluidSynth MIDI".
+
+[@554.83]
+^When I launch it, it creates
+a virtual MIDI device
+
+[@557.99]
+And I can use this setup to
+play drums with just my phone.
+
+[@561.98]
+-
+
+[@564.43]
+And thanks to the Web MIDI API,
+
+[@566.74]
+I can experiment with
+different control surfaces.
+
+[@570.15]
+-
+
+[@571.53]
+Next up, here, I just plugged
+my phone to my computer.
+
+[@575.40]
+Now, I can change the USB mode to MIDI.
+
+[@579.43]
+And as you might expect, it
+shows up as an output port.
+
+[@583.93]
+-
+
+[@586.57]
+One more example.
+
+[@588.33]
+MIDI data can also be exchanged
+over a LAN or a Wi-Fi Network.
+
+[@592.23]
+On a Mac, support for MIDI over Networks
+is built into the operating system.
+
+[@597.85]
+And on Windows, you can install
+the rtpMIDI driver.
+
+[@601.76]
+-
+
+[@603.89]
+To set up
+
+[@604.99]
+First create a session
+and type in the name.
+
+[@607.21]
+-
+
+[@608.92]
+And once the session is enabled,
+the two machines can now see each other
+
+[@613.47]
+And then, one machine can
+connect to the other machine
+
+[@616.33]
+And then they can start
+exchanging MIDI data.
+
+[@620.30]
+In this example,
+
+[@621.67]
+I’m running Logic Pro on my MacBook.
+
+[@624.12]
+-
+
+[@625.08]
+I use my keyboard to play the piano part.
+
+[@628.12]
+My Surface joins the Network MIDI session
+with my MacBook over the Wi-Fi connection
+
+[@633.82]
+And I use its touch screen
+to play the strings part.
+
+[@638.28]
+So these are some of the ways that
+MIDI devices and apps can be connected.
+
+[@642.42]
+As of writing this talk,
+
+[@644.19]
+I haven’t found a reliable way to
+for Windows and Android devices
+
+[@647.45]
+to exchange MIDI data over Bluetooth yet,
+
+[@650.17]
+but still, I think what we have
+right now is extremely flexible
+
+[@653.77]
+and allows for a lot of possibilities.
+
+[@656.52]
+I think the web platform
+is also very flexible
+
+[@659.10]
+and can do so many things today.
+
+[@661.26]
+Imagine what we can do
+
+[@662.53]
+When we combine the power of the
+web platform and the MIDI ecosystem.
+
+[@666.16]
+So here are some examples
+that I have experimented with
+
+[@669.53]
+So, the web has a Gamepad API
+
+[@672.04]
+It lets web applications receive
+input from game controllers.
+
+[@676.09]
+Here, I used a PlayStation game controller
+to create a sustain pedal for my keyboard
+
+[@681.39]
+And if I didn’t bring
+a game controller with me
+
+[@683.63]
+Using the pointer events API
+
+[@685.72]
+My iPhone can also become a sustain pedal
+
+[@689.10]
+-
+
+[@696.14]
+Let’s look at a few more examples
+
+[@698.55]
+^Using the DeviceOrientation Events
+I built a modulation wheel with my iPhone
+
+[@703.58]
+-
+
+[@712.35]
+...as well as a turntable
+
+[@714.52]
+I haven’t used them personally
+
+[@716.46]
+but this is just to give you
+some ideas of what’s possible.
+
+[@720.01]
+-
+
+[@722.51]
+One last example.
+
+[@723.87]
+The web has a WebRTC API to facilitate
+real-time communications between browsers.
+
+[@729.36]
+Earlier I said that
+I couldn’t reliably
+
+[@731.40]
+set up a wireless connection on Android
+and Windows devices using Bluetooth.
+
+[@735.52]
+But here’s one way I worked around it.
+
+[@737.51]
+I created a web application
+
+[@739.17]
+that uses WebRTC to transport MIDI
+data between connected peers.
+
+[@743.86]
+Here, I plugged my Android phone
+to a CASIO keyboard.
+
+[@747.03]
+I opened the same application
+on my Windows device
+
+[@749.75]
+And now I can control my keyboard
+wirelessly, thanks to WebRTC
+
+[@754.06]
+-
+
+[@759.35]
+So, these are the examples
+that I wanted to show you.
+
+[@762.47]
+-
+
+[@764.13]
+When I build frontend web applications,
+usually the experience is confined
+
+[@767.92]
+to a single device, unless I set up
+some kind of backend service
+
+[@771.38]
+so that different devices can
+communicate with each other.
+
+[@775.20]
+When I learned about the Web MIDI API,
+
+[@777.67]
+It totally amazed me.
+
+[@779.64]
+Now, web apps can exchange musical data
+in real-time with different devices
+
+[@784.10]
+Over USB, Ethernet, Wi-Fi
+and even Bluetooth
+
+[@787.67]
+without having to write any backend code
+
+[@790.55]
+And with the Web MIDI API,
+
+[@792.57]
+web applications can themselves
+become musical devices.
+
+[@796.84]
+In this talk,
+
+[@798.15]
+I’ve shown you several examples of using
+a web application as a MIDI controller
+
+[@802.74]
+But there are web-based
+MIDI synthesizers as well
+
+[@806.10]
+Thanks to the Web Audio API
+
+[@808.14]
+that provides support for
+low-latency audio in the browser
+
+[@811.72]
+^For example, webDX7 from the
+Web Audio Modules project
+
+[@815.73]
+^emulates the vintage DX7 digital
+synthesizer using WebAssembly.
+
+[@821.13]
+-
+
+[@824.14]
+webOBXD emulates the OB-X
+analog synthesizer.
+
+[@828.66]
+-
+
+[@830.66]
+And there’s even a full-on digital audio
+workstation on the web built by Bandlab.
+
+[@836.25]
+-
+
+[@839.74]
+So if you’re a web developer
+and you play music,
+
+[@842.79]
+I hope that this talk may give you
+some ideas or inspiration
+
+[@846.31]
+for you to play with.
+
+[@849.05]
+You can find the links to all the
+references and resources
+
+[@852.03]
+that I showed on this talk at
+dt.in.th/webmidi-talk.html
+
+[@859.01]
+And that’s all that I have for now
+
+[@861.03]
+Thank you!
+
+[@862.35]
+-

@@ -23,7 +23,18 @@ format_time = ->(t) { "%02d:%02d:%02d.%03d" % [t / 3600, t / 60 % 60, t % 60, (t
 
 cues.each do |cue|
   next if cue[:text] == '-'
+  text = cue[:text]
+
+  # Make text inside backticks italics.
+  text = text.gsub(/`([^`]+)`/) { "<i>#{$1}</i>" }
+  trailing = ""
+
+  # If text starts with `^`, move the subtitle to the top of the screen.
+  if text =~ /^\^/
+    text = text[1..-1]
+    trailing = " line:0"
+  end
   puts
-  puts "%s --> %s" % [format_time[cue[:start]], format_time[cue[:end]]]
-  puts cue[:text]
+  puts "%s --> %s%s" % [format_time[cue[:start]], format_time[cue[:end]], trailing]
+  puts text
 end
