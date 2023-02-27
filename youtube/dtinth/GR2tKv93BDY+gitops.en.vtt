@@ -42,7 +42,7 @@ Almost all of them are
 open source on GitHub
 
 [@49.25]
-So it can be used as a references
+So it can be used as a reference
 and others can learn from it.
 
 [@54.00]
@@ -212,58 +212,58 @@ But we haven’t really defined it.
 What is GitOps?
 
 [@225.00]
-Let’s look at the history.
+^Let’s look at the history.
 
 [@227.00]
-It was created in 2017
+^It was created in 2017
 
 [@231.86]
-By a company called Weaveworks.
+^By a company called Weaveworks.
 
 [@234.00]
-If you read the article
-“The history of GitOps”
+^If you read the article
+`“The history of GitOps”`
 
 [@237.00]
-It will tell you that in 2016,
+^It will tell you that in 2016,
 
 [@241.00]
-An engineer tried to deploy
+^An engineer tried to deploy
 a change to the system.
 
 [@247.75]
-If it works, it’s okay.
+^If it works, it’s okay.
 
 [@249.97]
-But if it doesn’t work, it
+^But if it doesn’t work, it
 “could wipe out the entire system.”
 
 [@254.00]
-Well, “the system was wiped out.”
+^Well, “the system was wiped out.”
 
 [@256.00]
-But something really cool happened.
+^But something really cool happened.
 
 [@261.00]
-“the Weaveworks team was able to bring
+^“the Weaveworks team was able to bring
 the system back up in about 40 minutes”
 
 [@266.00]
-They are “pleased with their progress.”
+^They are “pleased with their progress.”
 
 [@270.00]
-“the team sat together and
+^“the team sat together and
 made a list of these principles”
 
 [@275.00]
-And the CEO realized that
+^And the CEO realized that
 
 [@278.68]
-“one word that describes
+^“one word that describes
 all of this was ‘GitOps.’”
 
 [@285.00]
-So they tried to describe
+^So they tried to describe
 “the principles of GitOps.”
 
 [@288.00]
@@ -540,11 +540,11 @@ can be complicated in and of itself.
 Everything happens in the system.
 
 [@586.00]
-The first Discord example I showed you
-is usinga a push-based approach.
+^The first Discord example I showed you
+is using a push-based approach.
 
 [@590.00]
-Let’s look at this
+^Let’s look at this
 from an even higher level.
 
 [@595.00]
@@ -896,7 +896,7 @@ I push it up to GitHub.
 GitHub Action starts running.
 
 [@904.00]
-And GitHub Action runs “pulumi up.”
+And GitHub Action runs `pulumi up`.
 
 [@906.00]
 Pulumi will start comparing.
@@ -908,41 +908,41 @@ The desired state — this TypeScript file.
 The actual system state — nothing yet.
 
 [@916.00]
-It devises a plan.
+^It devises a plan.
 
 [@918.00]
-The plan describes what will be created.
+^The plan describes what will be created.
 
 [@920.00]
-And it will execute the plan
+^And it will execute the plan
 against our cloud service.
 
 [@923.00]
-Let’s say I remove this part.
+^Let’s say I remove this part.
 
 [@925.00]
-Cut it off.
+^Cut it off.
 
 [@927.00]
-And we push it up again.
+^And we push it up again.
 
 [@929.00]
-What happens?
+^What happens?
 
 [@930.53]
-It knows that this time,
+^It knows that this time,
 
 [@932.15]
-We desire two things.
+^We desire two things.
 
 [@934.00]
-But in the real system, there are 3.
+^But in the real system, there are 3.
 
 [@936.00]
-So this should be deleted.
+^So this should be deleted.
 
 [@939.55]
-Pulumi will go ahead and delete it.
+^Pulumi will go ahead and delete it.
 
 [@941.99]
 So for cloud infrastructures,
@@ -1009,16 +1009,16 @@ Grant write access.
 The admin will have to invite 7 people.
 
 [@993.99]
-Following the steps in the UI.
+^Following the steps in the UI.
 
 [@996.58]
-And then come back and say “all done.”
+^And then come back and say “all done.”
 
 [@998.85]
-It turns out that there are 8 people.
+^It turns out that there are 8 people.
 
 [@1000.62]
-And it’s the same loop.
+^And it’s the same loop.
 
 [@1003.21]
 But in Pulumi,
@@ -1184,27 +1184,27 @@ The third example.
 Can we use GitOps with a website?
 
 [@1150.00]
-If you’ve used GitHub Pages before,
+^If you’ve used GitHub Pages before,
 the GitOps concept may feel familiar.
 
 [@1154.00]
-Because when we push to a repo with
+^Because when we push to a repo with
 GitHub Pages set up, after a while,
 
 [@1158.00]
-It deploys the website for us.
+^It deploys the website for us.
 
 [@1160.00]
-It seems to me that GitHub Pages
+^It seems to me that GitHub Pages
 
 [@1164.00]
-follows all 4 GitOps principles.
+^follows all 4 GitOps principles.
 
 [@1166.00]
-That’s GitOpsing since 2008.
+^That’s GitOpsing since 2008.
 
 [@1170.00]
-That is 9 years before
+^That is 9 years before
 the term GitOps was coined.
 
 [@1175.80]
@@ -1327,7 +1327,7 @@ It’s not difficult.
 I created a GitHub workflow.
 
 [@1272.00]
-When I push new code, it runs update.mjs.
+^When I push new code, it runs update.mjs.
 
 [@1278.00]
 At the top, there will be a list of
@@ -1337,25 +1337,25 @@ DNS records that we want to have.
 And below is a synchronization script.
 
 [@1288.00]
-It will check the current state.
+^It will check the current state.
 
 [@1289.69]
-Which records are there?
+^Which records are there?
 
 [@1291.57]
-Which records do I have to add or modify?
+^Which records do I have to add or modify?
 
 [@1294.00]
-At the bottom, the tasks are executed.
+^At the bottom, the tasks are executed.
 
 [@1300.00]
-Actually, there is more code below that.
+^Actually, there is more code below that.
 
 [@1302.00]
-It’s just calls the Cloudflare API.
+^It’s just calls the Cloudflare API.
 
 [@1305.31]
-No dependencies needed, just a
+^No dependencies needed, just a
 fetch() call in Node.js.
 
 [@1310.00]
@@ -1381,13 +1381,13 @@ I see Hell’s Kitchen.
 And asked WHERE’S THE LAMB SAUCE?
 
 [@1336.00]
-So, GitOps lets anyone contribute
+^So, GitOps lets anyone contribute
 
 [@1342.00]
-Even if they’re not an admin.
+^Even if they’re not an admin.
 
 [@1346.00]
-They can open pull requests
+^They can open pull requests
 to participate in the project.
 
 [@1350.00]
@@ -1442,11 +1442,11 @@ In a Discord channel,
 we can create “webhooks.”
 
 [@1392.00]
-When created, the webhook will
+^When created, the webhook will
 be linked to the channel
 
 [@1395.42]
-And we will get a URL.
+^And we will get a URL.
 
 [@1396.96]
 We can use this URL and sent it
@@ -1471,26 +1471,26 @@ An HTTP PATCH request.
 The message will be edited.
 
 [@1419.23]
-It’s easy.
+This makes it easy.
 
 [@1420.15]
-I wrote this 34-line script.
+^I wrote this 34-line script.
 
 [@1423.33]
-It reads the rules.txt file,
+^It reads the rules.txt file,
 
 [@1425.52]
-Split into smaller messages.
+^Split into smaller messages.
 
 [@1428.65]
-And send a PATCH request
+^And send a PATCH request
 to the specified message IDs.
 
 [@1431.71]
-Something like this.
+^Something like this.
 
 [@1432.92]
-It’s convenient.
+^It’s convenient.
 
 [@1434.48]
 -
@@ -1513,36 +1513,37 @@ originally looks like.
 Just replace the contents.
 
 [@1453.96]
-I started by writing some simple message.
+^I started by writing some simple message
 
 [@1459.07]
-I added a link to “edit the message.”
+^And added a link to “edit the message.”
 
 [@1462.00]
-Someone contributed.
+^Then someone contributed.
 
 [@1463.55]
-I don’t know how to manage Discord server.
+^I’m not experienced at managing
+a Discord community.
 
 [@1466.00]
-I don’t know what to put in the rules.
+^I don’t know what to put in the rules.
 
 [@1468.00]
-Someone contributed.
+^Someone contributed.
 
 [@1470.00]
-They added a bunch of rules.
+^They added a bunch of rules.
 
 [@1472.00]
-The contributor doesn’t even
+^The contributor doesn’t even
 have to be a server admin.
 
 [@1474.43]
-Even then, they can help setting
+^Even then, they can help setting
 the rules for our server.
 
 [@1479.60]
-Thanks to @Thanyanit-J for this!
+^Thanks to @Thanyanit-J for this!
 
 [@1483.08]
 -
@@ -1614,63 +1615,63 @@ I want it to have a description
 In a consistent format.
 
 [@1538.00]
-This is the description.
+^This is the description.
 
 [@1540.00]
-If I have to write them all,
+^If I have to write them all,
 
 [@1542.00]
-It’s exhausting.
+^It’s exhausting.
 
 [@1544.00]
-I wanted to automate the process.
+^I wanted to automate the process.
 
 [@1546.00]
-It’s not just this.
+^It’s not just this.
 
 [@1548.00]
-Talk description, timestamps, etc.
+^Talk description, timestamps, etc.
 
-[@1549.91]
-If you want the video to be able
+[@1549.80]
+^If you want the video to be able
 to reach an international audience.
 
 [@1552.60]
-It should have an English description.
+^It should have an English description.
 
 [@1556.00]
-If you set the language
+^If you set the language
 in YouTube to English,
 
 [@1560.00]
-You will get an English description.
+^You will get an English description.
 
 [@1562.00]
-In some talks,
+^In some talks,
 
 [@1566.00]
-If the speaker has the time to do it,
+^If the speaker has the time to do it,
 
 [@1569.50]
-They can upload an English subtitle
+^They can upload an English subtitle
 to the video on our channel.
 
 [@1574.00]
-Besides this.
+^Besides this.
 
 [@1576.00]
-If we use the talk title
+^If we use the talk title
 as the video title,
 
 [@1578.22]
-Sometimes it’s not as engaging.
+^Sometimes it’s not as engaging.
 
 [@1579.59]
-We have to make it possible to
+^We have to make it possible to
 customize the video title,
 
 [@1585.26]
-Both Thai and English.
+^Both Thai and English.
 
 [@1588.23]
 -
@@ -1693,44 +1694,44 @@ to our channel’s YouTube Studio.
 By using GitOps, anyone can contribute.
 
 [@1606.00]
-Like I said.
+^Like I said.
 
 [@1608.00]
-Everything is on a GitHub repo
+^Everything is on a GitHub repo
 
 [@1610.00]
-creatorsgarten/videos.
+^creatorsgarten/videos.
 
 [@1614.00]
-In each folder there will be talk files.
+^In each folder there will be talk files.
 
 [@1617.13]
-There will be an .md file
+^There will be an .md file
 that stores the metadata.
 
 [@1620.00]
-It contains a YAML frontmatter.
+^It contains a YAML frontmatter.
 
 [@1622.00]
 -
 
 [@1624.00]
-At the top is a JPEG file.
+^At the top is a JPEG file.
 
 [@1626.00]
-It’s a thumbnail of the video.
+^It’s the thumbnail of the video.
 
 [@1628.00]
-And at the bottom is a subtitles file.
+^And at the bottom is a subtitles file.
 
 [@1631.41]
 -
 
 [@1632.88]
-When I made this pipeline,
+^When I made this pipeline,
 
 [@1634.00]
-There was a couple of problems.
+^There was a couple of problems.
 
 [@1636.00]
 YouTube API.
@@ -1765,16 +1766,16 @@ my own reconciler again.
 The technique is:
 
 [@1660.92]
-I created a “local database.”
+^I created a “local database.”
 
 [@1664.07]
-The principles are the same.
+^The principles are the same.
 
 [@1665.59]
-But instead of querying the YouTube API,
+^But instead of querying the YouTube API,
 
 [@1669.29]
-We query this local database instead.
+^We query this local database instead.
 
 [@1672.00]
 -
@@ -1789,16 +1790,16 @@ We just query the local database instead.
 And we’ll get the same change.
 
 [@1680.00]
-And we’ll apply it to the real system.
+^And we’ll apply it to the real system.
 
 [@1682.00]
-And when it’s applied to the real system.
+^And when it’s applied to the real system.
 
 [@1684.00]
-We can update our local database.
+^We can update our local database.
 
 [@1686.78]
-Now,
+^Now,
 
 [@1687.76]
 Where to keep the local database?
@@ -1807,95 +1808,95 @@ Where to keep the local database?
 I keep it in the same Git repo,
 
 [@1691.45]
-in a file called youtube-sync.yml.
+in a file called `youtube-sync.yml`.
 
 [@1694.00]
 It will keep all the states.
 
 [@1696.00]
-For example,
+^For example,
 
 [@1698.00]
-When updating a thumbnail file,
+^When updating a thumbnail file,
 
 [@1700.00]
-I’ll keep the file hash,
+^I’ll keep the file hash,
 
 [@1701.50]
-So that in the future,
+^So that in the future,
 
 [@1703.33]
-If the file changes,
+^If the file changes,
 
 [@1704.60]
-We can compare the hash with this state.
+^We can compare the hash with this state.
 
 [@1708.00]
-If the hash is unchanged,
+^If the hash is unchanged,
 we don’t have to upload it again.
 
 [@1713.74]
-The same goes for subtitles.
+^The same goes for subtitles.
 
 [@1716.35]
-As well as video metadata.
+^As well as video metadata.
 
 [@1718.68]
-We can compare between the contents
+^We can compare between the contents
 currently on the channel
 
 [@1722.73]
-And what we want it to be
+^And what we want it to be
 
 [@1724.41]
-Without having to call the YouTube API.
+^Without having to call the YouTube API.
 
 [@1727.09]
-Finally, when we upload a caption
+^Finally, when we upload a caption
 to the YouTube API.
 
 [@1730.85]
-It will give you an ID.
+^It will give you an ID.
 
 [@1732.74]
-If you go back to the previous slide.
+^If we go back to the previous slide.
 
 [@1734.23]
-You’ll see that just listing the
+^You’ll see that just listing the
 video captions costs 50 points.
 
 [@1740.90]
 -
 
 [@1742.00]
-So, I keep the ID in the local state.
+^So, I keep the ID in the local state.
 
 [@1746.27]
-When we update the caption,
+^When we update the caption,
 we know which caption ID to update.
 
 [@1750.22]
-Without having to query the YouTube API.
+^Without having to query the YouTube API.
 
-[@1754.43]
-What does it mean?
+[@1754.23]
+^So, how does this work in practice?
 
 [@1755.72]
-Now, when I want to publish a video,
+^When I want to publish a video,
 
 [@1759.98]
-I just change the metadata file
+^I just change the metadata file
 from published: false to true.
 
 [@1763.02]
-When GitHub Actions finishes running,
+^When GitHub Actions finishes running,
 
 [@1764.74]
-It will update the database.
+^It will update the database.
 
 [@1766.31]
-From the privacyStatus that
-was unlisted, it is now public.
+^From the `privacyStatus` that
+was `unlisted`, it is now `public`.
 
 [@1771.63]
 Now,
@@ -1922,7 +1923,7 @@ Then I copied the URL.
 Once I copied the URL,
 
 [@1786.00]
-I ran the import script.
+I ran the `import` script.
 
 [@1790.00]
 Put the URL in.
@@ -2001,48 +2002,45 @@ Push to Git.
 GitHub Actions starts working.
 
 [@1857.50]
-When you press refresh.
+^When you press refresh.
 
 [@1859.16]
-It will be like this.
+^It will be like this. (Tada.)
 
 [@1861.53]
-All the description is here now.
+^All the descriptions are here now.
 
 [@1864.00]
-Here’s the original thumbnail.
+^Here’s the original thumbnail.
 
 [@1866.00]
-We replaced it with
-a slightly better thumbnail.
-
-[@1870.00]
-Done.
+^We replaced it with a
+slightly better thumbnail.
 
 [@1872.00]
-Then the updated state file
-is saved back into GitHub.
+^Then the updated state file
+is saved back to GitHub.
 
 [@1878.00]
-Everything is now up-to-date.
+^Everything is now up-to-date.
 
 [@1882.00]
-So —
+^So —
 
 [@1884.00]
-About running a YouTube channel,
+^About running a YouTube channel,
 
 [@1886.00]
-I don’t have much experience.
+^I don’t have much experience.
 
 [@1888.00]
-And —
+^And —
 
 [@1890.00]
-But I know.
+^But I know
 
 [@1892.00]
-There are people who knows
+That there are people who knows
 how to manage a YouTube channel.
 
 [@1895.04]
